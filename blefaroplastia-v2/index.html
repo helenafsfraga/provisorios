@@ -353,12 +353,31 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
 .paraquem{background:var(--marfim)}
 .sinais{border-top:1px solid rgba(35,26,23,.16)}
 .sinais li{padding:22px 0;border-bottom:1px solid rgba(35,26,23,.16);display:grid;grid-template-columns:2.6em 1fr;align-items:baseline;font:400 clamp(1.2rem,5vw,1.6rem)/1.25 var(--serif)}
-.cada{margin-top:clamp(48px,10vw,88px)}
-.cada .foto-vaga{aspect-ratio:4/3;border-radius:var(--arco)}
-.cada figcaption{margin-top:28px;padding-left:22px;border-left:1px solid var(--ouro)}
-.cada h3{font-size:clamp(1.6rem,6.4vw,2.2rem);line-height:1.12;color:var(--vinho)}
-.cada h3 em{font-style:italic;color:var(--ouro)}
-.cada p{margin-top:14px;color:var(--tinta-suave)}
+/* blefaroplastia feminina / masculina */
+.perfil{background:var(--areia)}
+.perfil .wrap{display:grid;gap:44px}
+.perfil-foto{position:relative;width:min(78vw,400px);margin-inline:auto}
+.perfil .foto-vaga{aspect-ratio:4/5}
+.arco-f{border-radius:var(--arco)}
+.perfil-foto::before{content:"";position:absolute;inset:-12px -12px 0;border:1px solid var(--ouro);border-bottom:0;border-radius:var(--arco);opacity:.55;pointer-events:none}
+.pontos{margin-top:34px;border-top:1px solid rgba(35,26,23,.2)}
+.pontos li{position:relative;padding:18px 0 18px 30px;border-bottom:1px solid rgba(35,26,23,.2);font:400 clamp(1.1rem,4.6vw,1.3rem)/1.35 var(--serif)}
+.pontos li::before{content:"";position:absolute;left:2px;top:1.55em;width:9px;height:9px;border:1px solid var(--ouro);transform:rotate(45deg)}
+.perfil.escuro{background:var(--bordo);color:var(--sobre-escuro)}
+.perfil.escuro .eyebrow{color:var(--ouro-claro)}
+.perfil.escuro h2{color:#FBF6EC}
+.perfil.escuro h2 em{color:var(--ouro-claro)}
+.perfil.escuro .lead{color:rgba(237,227,210,.82)}
+.perfil.escuro .pontos,.perfil.escuro .pontos li{border-color:rgba(212,183,122,.28)}
+.perfil.escuro .pontos li::before{border-color:var(--ouro-claro)}
+.perfil.escuro .perfil-foto::before{inset:14px -14px -14px 14px;border:1px solid var(--ouro-claro);border-radius:0;opacity:.6}
+.perfil.escuro .foto-vaga{position:relative;z-index:1}
+@media (min-width:1000px){
+  .perfil .wrap{grid-template-columns:minmax(0,4.4fr) minmax(0,6fr);gap:clamp(64px,8vw,120px);align-items:center}
+  .perfil-foto{width:100%;max-width:440px;margin:0}
+  .perfil.escuro .perfil-foto{order:2;justify-self:end}
+  .perfil.escuro .wrap{grid-template-columns:minmax(0,6fr) minmax(0,4.4fr)}
+}
 .duo{margin-top:clamp(48px,10vw,88px);display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .duo .arco{aspect-ratio:3/4;margin-bottom:18px}
 .duo .arco.foto-vaga{border-radius:var(--arco)}
@@ -498,13 +517,38 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
         <li><span class="indice">iii.</span>Aparência constante de cansaço ou sono</li>
         <li><span class="indice">iv.</span>Sensação de peso ou redução do campo de visão</li>
       </ul>
-      <figure class="cada surge">
-        <div class="foto-vaga"><span>Foto genérica<br>uma paciente e um paciente, mesma imagem</span></div>
-        <figcaption>
-          <h3>O mesmo cuidado, um desenho <em>para cada rosto.</em></h3>
-          <p>Nas mulheres, alivio o peso das pálpebras e as bolsas mantendo a expressão que sempre foi delas. Nos homens, abro o olhar preservando os traços masculinos, sem aspecto de quem operou.</p>
-        </figcaption>
-      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="perfil" id="feminina">
+  <div class="wrap">
+    <div class="perfil-foto surge"><div class="foto-vaga arco-f"><span>Foto genérica<br>paciente mulher</span></div></div>
+    <div class="surge">
+      <p class="eyebrow">Blefaroplastia feminina</p>
+      <h2 style="margin:20px 0 24px">Leveza no olhar, <em>sem mudar quem você é.</em></h2>
+      <p class="lead">O rosto feminino pede delicadeza no traço. O objetivo é devolver frescor ao olhar e manter intacta a expressão que as pessoas reconhecem em você.</p>
+      <ul class="pontos">
+        <li>Contorno da pálpebra superior definido, respeitando o seu formato natural</li>
+        <li>Bolsas tratadas sem deixar o olhar fundo</li>
+        <li>Incisão posicionada na dobra da pálpebra</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="perfil escuro" id="masculina">
+  <div class="wrap">
+    <div class="perfil-foto surge"><div class="foto-vaga escura quadro-m"><span>Foto genérica<br>paciente homem</span></div></div>
+    <div class="surge">
+      <p class="eyebrow">Blefaroplastia masculina</p>
+      <h2 style="margin:20px 0 24px">Um olhar descansado, <em>com os mesmos traços.</em></h2>
+      <p class="lead">No rosto masculino, menos é mais. A cirurgia é conservadora por princípio: tira o peso e o cansaço e deixa o rosto exatamente como ele é.</p>
+      <ul class="pontos">
+        <li>Sobrancelha mantida na posição e no desenho originais</li>
+        <li>Retirada de pele comedida, sem arredondar o olhar</li>
+        <li>Recuperação acompanhada de perto, para um retorno discreto à rotina</li>
+      </ul>
     </div>
   </div>
 </section>
