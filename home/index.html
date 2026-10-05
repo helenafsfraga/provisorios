@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Dra. Helena Fraga · Plástica Ocular em Belo Horizonte</title>
+<meta name="description" content="Dra. Helena Fraga, oftalmologista especialista em plástica ocular. Blefaroplastia e cirurgia das pálpebras em Belo Horizonte.">
+<meta name="theme-color" content="#3D0C14">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/mesa.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marfim:#F6F1E7; --areia:#E6DCC9; --linho:#EFE8DA;
+  --vinho:#6E1423; --bordo:#3D0C14; --bordo-fundo:#2A070D;
+  --ouro:#B08D4C; --ouro-claro:#D4B77A;
+  --tinta:#231A17; --tinta-suave:#5A4D47; --sobre-escuro:#EDE3D2;
+  --serif:"Cormorant Garamond","Cormorant",Georgia,"Times New Roman",serif;
+  --sans:"Jost","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --gutter:clamp(22px,6vw,72px);
+  --max:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--marfim);color:var(--tinta);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body.menu-aberto{overflow:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3,p,ul,ol,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+
+/* tipografia */
+.eyebrow{font-size:11.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:var(--ouro);display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor;flex:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;text-wrap:balance}
+h1{font-size:clamp(2.7rem,11vw,5rem);line-height:1.04}
+h2{font-size:clamp(2.05rem,7.4vw,3.3rem);line-height:1.06;color:var(--vinho)}
+h1 em,h2 em{font-style:italic;color:var(--ouro)}
+.lead{font-size:clamp(1.02rem,4.1vw,1.16rem);color:var(--tinta-suave);max-width:36em}
+section{padding-block:clamp(72px,16vw,136px)}
+.elo{white-space:nowrap;display:inline-flex;align-items:center;gap:12px;font-size:12px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--vinho);text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(110,20,35,.35);transition:border-color .25s,gap .25s}
+.elo:hover{border-color:var(--vinho);gap:18px}
+.elo svg,.btn svg{width:16px;height:16px;flex:none}
+.escuro .elo{color:var(--ouro-claro);border-color:rgba(212,183,122,.4)}
+.escuro .elo:hover{border-color:var(--ouro-claro)}
+
+/* botões */
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;padding:0 30px;border-radius:999px;font:500 13px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:background .25s,color .25s,border-color .25s}
+.btn-ouro{background:var(--ouro-claro);color:var(--bordo-fundo)}
+.btn-ouro:hover{background:#E2C88E}
+.btn-linha{border:1px solid rgba(110,20,35,.35);color:var(--vinho);min-height:44px;padding:0 22px;font-size:11.5px}
+.btn-linha:hover{border-color:var(--vinho);background:var(--vinho);color:var(--marfim)}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:30;background:rgba(246,241,231,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(35,26,23,.08)}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;height:70px}
+.topo .marca img{width:124px}
+.topo nav,.topo .btn-linha{display:none}
+.abre-menu{appearance:none;border:0;background:none;width:48px;height:48px;margin-right:-10px;display:grid;place-items:center;cursor:pointer;color:var(--vinho)}
+.abre-menu span{display:block;width:24px;height:1px;background:currentColor;box-shadow:0 7px 0 currentColor,0 -7px 0 currentColor}
+
+/* menu celular */
+.gaveta{position:fixed;inset:0;z-index:40;background:var(--bordo);color:var(--sobre-escuro);padding:20px var(--gutter) calc(28px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;visibility:hidden;opacity:0;transition:opacity .3s,visibility .3s;overflow-y:auto}
+.menu-aberto .gaveta{visibility:visible;opacity:1}
+.fecha-menu{appearance:none;border:0;background:none;color:var(--ouro-claro);align-self:flex-end;width:48px;height:48px;margin-right:-10px;font:300 34px/1 var(--sans);cursor:pointer}
+.gaveta ul{margin-top:18px;border-top:1px solid rgba(212,183,122,.25)}
+.gaveta li a{display:block;padding:19px 0;border-bottom:1px solid rgba(212,183,122,.25);font:500 1.75rem/1.1 var(--serif);text-decoration:none;color:#FBF6EC}
+.gaveta .btn{margin-top:auto}
+
+/* abertura */
+.abertura{background:var(--bordo);color:var(--sobre-escuro);padding:0;position:relative;overflow:hidden}
+.abertura-foto{position:relative;aspect-ratio:4/3.5;overflow:hidden}
+.abertura-foto img{width:100%;height:100%;object-fit:cover;object-position:66% 30%}
+.abertura-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(61,12,20,.1) 30%,rgba(61,12,20,.7) 78%,var(--bordo) 100%)}
+.abertura-texto{position:relative;margin-top:-58px;padding:0 var(--gutter) 60px}
+.abertura .eyebrow{color:var(--ouro-claro)}
+.abertura h1{margin:22px 0 22px;color:#FBF6EC}
+.abertura h1 em{color:var(--ouro-claro);display:block}
+.abertura .lead{color:rgba(237,227,210,.82)}
+.acoes{margin-top:34px;display:flex;flex-direction:column;align-items:center;gap:14px}
+.acoes .btn{width:100%}
+
+/* números */
+.numeros{background:var(--bordo-fundo);color:var(--sobre-escuro);padding-block:0}
+.numeros li{padding:30px 0;border-top:1px solid rgba(212,183,122,.2);display:flex;align-items:baseline;gap:18px}
+.numeros li:first-child{border-top:0}
+.numeros strong{font:500 2.7rem/1 var(--serif);color:var(--ouro-claro);min-width:3.6em}
+.numeros span{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(237,227,210,.72);line-height:1.5}
+
+/* sobre */
+.sobre figure{position:relative;margin-bottom:44px}
+.sobre figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:70% 20%}
+.sobre figure::after{content:"";position:absolute;inset:12px;border:1px solid rgba(246,241,231,.5);pointer-events:none}
+.sobre h2{margin:22px 0 26px}
+.sobre p+p{margin-top:18px}
+.sobre .elo{margin-top:32px}
+.citacao{margin-top:36px;padding-left:22px;border-left:1px solid var(--ouro);font:italic 500 1.5rem/1.3 var(--serif);color:var(--vinho)}
+
+/* tratamentos */
+.tratamentos{background:var(--areia)}
+.tratamentos h2{margin:22px 0 22px}
+.destaques{margin-top:44px;display:grid;gap:14px}
+.destaque{display:flex;flex-direction:column;gap:14px;padding:30px 26px 28px;background:var(--marfim);text-decoration:none;position:relative;transition:background .3s,color .3s}
+.destaque b{font:italic 500 1.2rem/1 var(--serif);color:var(--ouro)}
+.destaque h3{font-size:1.85rem;line-height:1.1;color:var(--vinho);transition:color .3s}
+.destaque p{color:var(--tinta-suave);font-size:15.5px;transition:color .3s}
+.destaque span{margin-top:auto;padding-top:10px;font-size:11.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--vinho);display:flex;align-items:center;gap:10px;transition:color .3s,gap .25s}
+.destaque span svg{width:15px;height:15px}
+.destaque:hover{background:var(--bordo)}
+.destaque:hover h3{color:#FBF6EC}
+.destaque:hover p{color:rgba(237,227,210,.8)}
+.destaque:hover span{color:var(--ouro-claro);gap:16px}
+.outros{margin-top:48px}
+.outros-titulo{font-size:11.5px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--tinta-suave);margin-bottom:10px}
+.outros ul{border-top:1px solid rgba(35,26,23,.18)}
+.outros a{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0;border-bottom:1px solid rgba(35,26,23,.18);font:500 1.3rem/1.2 var(--serif);text-decoration:none;color:var(--tinta);transition:color .25s,padding .25s}
+.outros a svg{width:16px;height:16px;flex:none;color:var(--ouro)}
+.outros a:hover{color:var(--vinho);padding-left:8px}
+
+/* PAI */
+.pai{background:var(--bordo);color:var(--sobre-escuro);position:relative}
+.pai::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 70% at 85% 0%,rgba(176,141,76,.2),transparent 60%);pointer-events:none}
+.pai .wrap{position:relative}
+.pai .eyebrow{color:var(--ouro-claro)}
+.pai h2{color:#FBF6EC;margin:22px 0 26px}
+.pai h2 em{color:var(--ouro-claro)}
+.pai .lead{color:rgba(237,227,210,.82)}
+.pai .elo{margin-top:30px}
+.etapas{margin-top:44px;border-top:1px solid rgba(212,183,122,.28)}
+.etapas li{padding:24px 0;border-bottom:1px solid rgba(212,183,122,.28);display:grid;grid-template-columns:5.4em 1fr;gap:14px;align-items:baseline}
+.etapas b{font:500 1.5rem/1 var(--serif);color:var(--ouro-claro)}
+.etapas span{color:rgba(237,227,210,.85)}
+
+/* estrutura */
+.estrutura h2{margin:22px 0 26px}
+.galeria{margin-top:44px;display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.galeria img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
+.galeria img:first-child{grid-column:1/-1;aspect-ratio:16/10}
+.estrutura .elo{margin-top:30px}
+
+/* avaliação */
+.prova{background:var(--linho);text-align:center;padding-block:clamp(64px,13vw,104px)}
+.prova .nota-google{font:500 clamp(4.2rem,20vw,6.5rem)/1 var(--serif);color:var(--vinho)}
+.prova .nota-google small{font-size:.32em;color:var(--tinta-suave);letter-spacing:.04em}
+.estrelas{color:var(--ouro);letter-spacing:.35em;font-size:15px;margin:14px 0 18px}
+.prova p{max-width:26em;margin-inline:auto;color:var(--tinta-suave)}
+.prova .elo{margin-top:18px}
+
+/* blog */
+.blog h2{margin:22px 0 36px}
+.artigos{border-top:1px solid rgba(35,26,23,.16)}
+.artigos a{display:grid;grid-template-columns:2.4em 1fr;gap:10px;padding:26px 0;border-bottom:1px solid rgba(35,26,23,.16);text-decoration:none;transition:padding .25s}
+.artigos b{font:italic 500 1.2rem/1.5 var(--serif);color:var(--ouro)}
+.artigos h3{font-size:1.45rem;line-height:1.2;color:var(--tinta);transition:color .25s}
+.artigos a:hover h3{color:var(--vinho)}
+.blog .elo{margin-top:30px}
+
+/* contato */
+.contato{background:var(--bordo-fundo);color:var(--sobre-escuro)}
+.contato .eyebrow{color:var(--ouro-claro)}
+.contato h2{color:#FBF6EC;margin:24px 0 22px}
+.contato h2 em{color:var(--ouro-claro)}
+.contato .lead{color:rgba(237,227,210,.78)}
+.contato .btn{margin-top:34px;width:100%}
+.dados{margin-top:52px;border-top:1px solid rgba(212,183,122,.25)}
+.dados div{padding:22px 0;border-bottom:1px solid rgba(212,183,122,.25)}
+.dados dt{font-size:11px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--ouro-claro);margin-bottom:8px}
+.dados dd{font:500 1.35rem/1.35 var(--serif);color:#FBF6EC}
+.dados a{text-decoration:none}
+.dados a:hover{color:var(--ouro-claro)}
+
+/* rodapé */
+footer{background:var(--bordo-fundo);color:rgba(237,227,210,.6);font-size:13.5px;padding:40px 0 48px;border-top:1px solid rgba(212,183,122,.2)}
+footer .wrap{display:grid;gap:12px}
+footer strong{font-weight:500;color:var(--sobre-escuro);letter-spacing:.04em}
+.provisorio{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(212,183,122,.7)}
+
+/* entrada suave */
+.surge{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.surge.dentro{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.surge{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}.gaveta{transition:none}}
+
+/* tablet */
+@media (min-width:700px){
+  .numeros ul{display:grid;grid-template-columns:repeat(3,1fr)}
+  .numeros li{border-top:0;border-left:1px solid rgba(212,183,122,.2);padding:40px 0 40px 32px;flex-direction:column;gap:12px}
+  .numeros li:first-child{border-left:0;padding-left:0}
+  .acoes{flex-direction:row;gap:28px}
+  .acoes .btn,.contato .btn{width:auto}
+  .destaques{grid-template-columns:repeat(3,1fr)}
+  .outros ul{display:grid;grid-template-columns:1fr 1fr;column-gap:48px}
+  .galeria{grid-template-columns:repeat(3,1fr)}
+  .galeria img:first-child{grid-column:1/3;grid-row:1/3;aspect-ratio:auto}
+}
+
+/* desktop */
+@media (min-width:1000px){
+  body{font-size:18px}
+  html{scroll-padding-top:100px}
+  .topo .wrap{height:86px}
+  .topo .marca img{width:148px}
+  .abre-menu{display:none}
+  .topo nav{display:block}
+  .topo nav ul{display:flex;gap:clamp(18px,2.4vw,34px)}
+  .topo nav a{font-size:12px;font-weight:400;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--tinta);padding:8px 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+  .topo nav a:hover{color:var(--vinho);border-color:var(--ouro)}
+  .topo .btn-linha{display:inline-flex}
+
+  .abertura{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);min-height:min(800px,calc(100vh - 86px))}
+  .abertura h1{font-size:clamp(3.2rem,4.3vw,3.9rem)}
+  .abertura-foto{order:2;aspect-ratio:auto;height:100%}
+  .abertura-foto img{object-position:68% 30%}
+  .abertura-foto::after{background:linear-gradient(90deg,var(--bordo) 0%,rgba(61,12,20,.4) 24%,rgba(61,12,20,.05) 55%)}
+  .abertura-texto{margin:0;align-self:center;padding:72px 32px 72px max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)))}
+
+  .duas{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(56px,7vw,104px);align-items:start}
+  .duas.centro{align-items:center}
+  .sobre figure{margin:0}
+  .etapas{margin-top:0}
+  .dados{margin-top:0}
+  .destaque{padding:40px 34px 34px;min-height:340px}
+  .destaque h3{font-size:2.1rem}
+  .estrutura .galeria{margin-top:64px}
+  footer .wrap{grid-template-columns:1fr auto;align-items:end}
+}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Início"><img src="img/logo.webp" alt="Helena Fraga · Plástica Ocular" width="148" height="74"></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#pai">PAI</a></li>
+        <li><a href="#estrutura">Estrutura</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-linha" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação</a>
+    <button class="abre-menu" id="abre-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta"><span></span></button>
+  </div>
+</header>
+
+<div class="gaveta" id="gaveta" aria-hidden="true">
+  <button class="fecha-menu" id="fecha-menu" aria-label="Fechar menu">&times;</button>
+  <ul>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#tratamentos">Tratamentos</a></li>
+    <li><a href="#pai">Assistência Intensiva</a></li>
+    <li><a href="#estrutura">Estrutura</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <a class="btn btn-ouro" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação</a>
+</div>
+
+<main>
+
+<section class="abertura" id="inicio">
+  <div class="abertura-foto">
+    <img src="img/mesa.jpg" alt="Dra. Helena Fraga em seu consultório" width="1200" height="654" fetchpriority="high">
+  </div>
+  <div class="abertura-texto">
+    <p class="eyebrow">Plástica ocular · Belo Horizonte</p>
+    <h1>Precisão de cirurgiã. <em>Olhar de quem cuida.</em></h1>
+    <p class="lead">Oftalmologia e cirurgia plástica ocular em atendimento particular, do diagnóstico à recuperação completa.</p>
+    <div class="acoes escuro">
+      <a class="btn btn-ouro" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+      <a class="elo" href="#tratamentos">Conhecer os tratamentos</a>
+    </div>
+  </div>
+</section>
+
+<section class="numeros" aria-label="Trajetória">
+  <div class="wrap">
+    <ul>
+      <li><strong>20.000+</strong><span>cirurgias<br>realizadas</span></li>
+      <li><strong>30+</strong><span>anos de<br>medicina</span></li>
+      <li><strong>4,9</strong><span>avaliação média<br>no Google</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="wrap duas centro">
+    <figure class="surge">
+      <img src="img/retrato.jpg" alt="Dra. Helena Fraga na recepção da clínica" width="1100" height="1467" loading="lazy">
+    </figure>
+    <div class="surge">
+      <p class="eyebrow">Dra. Helena Fraga</p>
+      <h2>Três décadas dedicadas a uma região <em>de milímetros.</em></h2>
+      <p>Sou oftalmologista formada pela UFMG, com fellowship em plástica ocular e título de especialista pelo CBO e pela SBCPO.</p>
+      <p>Opero pálpebras conhecendo o olho que elas protegem. É o que me permite buscar um resultado bonito sem abrir mão da função, e conduzir cada paciente com a calma de quem já percorreu esse caminho muitas vezes.</p>
+      <p class="citacao">Transformar o olhar e a autoestima, com o menor tempo de recuperação possível.</p>
+      <a class="elo" href="https://drahelenafraga.com.br/dra-helena-fraga/">Conhecer minha trajetória
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="tratamentos" id="tratamentos">
+  <div class="wrap">
+    <div class="surge">
+      <p class="eyebrow">Tratamentos</p>
+      <h2>Estética e saúde das pálpebras, <em>no mesmo cuidado.</em></h2>
+      <p class="lead">Da cirurgia estética à reconstrução, cada indicação começa por uma avaliação completa dos seus olhos.</p>
+    </div>
+
+    <div class="destaques surge">
+      <a class="destaque" href="../blefaroplastia/">
+        <b>i.</b>
+        <h3>Blefaroplastia</h3>
+        <p>Cirurgia das pálpebras para corrigir o excesso de pele e as bolsas que pesam sobre o olhar.</p>
+        <span>Saber mais <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="destaque" href="https://drahelenafraga.com.br/especialidades/mid-face-lift-associada-a-blefaroplastia/">
+        <b>ii.</b>
+        <h3>Mid face lift</h3>
+        <p>Elevação do terço médio da face, associada à cirurgia das pálpebras.</p>
+        <span>Saber mais <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+      <a class="destaque" href="https://drahelenafraga.com.br/especialidades/retiradas-de-bolsas-palpebrais-via-conjuntival-sem-corte-na-pele/">
+        <b>iii.</b>
+        <h3>Bolsas palpebrais sem corte na pele</h3>
+        <p>Retirada das bolsas por via conjuntival, sem incisão externa.</p>
+        <span>Saber mais <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span>
+      </a>
+    </div>
+
+    <div class="outros surge">
+      <p class="outros-titulo">Também realizo</p>
+      <ul>
+        <li><a href="https://drahelenafraga.com.br/especialidades/elevacao-das-sobrancelhas/">Elevação das sobrancelhas <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li>
+        <li><a href="https://drahelenafraga.com.br/especialidades/correcao-de-entropio-das-palpebras/">Correção de entrópio <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li>
+        <li><a href="https://drahelenafraga.com.br/especialidades/reconstrucao-das-palpebras/">Reconstrução das pálpebras <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li>
+        <li><a href="https://drahelenafraga.com.br/especialidades/resseccao-de-tumores-palpebrais/">Ressecção de tumores palpebrais <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li>
+        <li><a href="https://drahelenafraga.com.br/especialidades/resseccao-de-tumores-conjuntivais-com-cola-biologica/">Tumores conjuntivais com cola biológica <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li>
+        <li><a href="https://drahelenafraga.com.br/especialidades/pterigio-com-uso-de-cola-biologica/">Pterígio com cola biológica <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pai escuro" id="pai">
+  <div class="wrap duas">
+    <div class="surge">
+      <p class="eyebrow">Programa de Assistência Intensiva</p>
+      <h2>Noventa dias ao seu lado, <em>não apenas uma cirurgia.</em></h2>
+      <p class="lead">O PAI reúne toda a equipe da clínica em torno da sua recuperação, presencialmente e à distância, do primeiro dia ao resultado final.</p>
+      <a class="elo" href="https://drahelenafraga.com.br/pai-programa-de-assistencia-intensiva/">Conhecer o programa
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <ol class="etapas surge">
+      <li><b>1º dia</b><span>Cuidados intensificados, com tecnologias voltadas à recuperação imediata.</span></li>
+      <li><b>Semanas</b><span>Reavaliações contínuas, drenagens, laser e fototerapia com equipe multidisciplinar.</span></li>
+      <li><b>90 dias</b><span>Acompanhamento diário por um grupo exclusivo com toda a equipe.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="estrutura" id="estrutura">
+  <div class="wrap">
+    <div class="surge">
+      <p class="eyebrow">A clínica</p>
+      <h2>Na Savassi, com tempo <em>e silêncio.</em></h2>
+      <p class="lead">Um espaço pensado para consultas sem pressa, onde cada etapa acontece com privacidade.</p>
+    </div>
+    <div class="galeria surge">
+      <img src="img/parede.webp" alt="Recepção da clínica Helena Fraga" loading="lazy" width="1024" height="683">
+      <img src="img/vista.webp" alt="Vista do consultório para Belo Horizonte" loading="lazy" width="1024" height="683">
+      <img src="img/consultorio.webp" alt="Consultório" loading="lazy" width="1024" height="683">
+    </div>
+    <a class="elo" href="https://drahelenafraga.com.br/estrutura/">Ver a estrutura completa
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+    </a>
+  </div>
+</section>
+
+<section class="prova">
+  <div class="wrap surge">
+    <p class="nota-google">4,9<small> / 5</small></p>
+    <p class="estrelas" aria-hidden="true">★★★★★</p>
+    <p>Avaliação média dos pacientes no Google.</p>
+    <a class="elo" href="https://drahelenafraga.com.br/depoimentos/">Ler os depoimentos</a>
+  </div>
+</section>
+
+<section class="blog" id="blog">
+  <div class="wrap duas">
+    <div class="surge">
+      <p class="eyebrow">Blog</p>
+      <h2>Para decidir <em>com informação.</em></h2>
+    </div>
+    <div class="surge">
+      <div class="artigos">
+        <a href="https://drahelenafraga.com.br/guia-essencial-como-se-preparar-adequadamente-para-a-cirurgia-de-palpebras-blefaroplastia/"><b>i.</b><h3>Como se preparar para a cirurgia de pálpebras</h3></a>
+        <a href="https://drahelenafraga.com.br/10-dicas-essenciais-para-uma-recuperacao-bem-sucedida-apos-a-cirurgia-das-palpebras-blefaroplastia/"><b>ii.</b><h3>Dez cuidados para uma boa recuperação após a blefaroplastia</h3></a>
+      </div>
+      <a class="elo" href="https://drahelenafraga.com.br/blog/">Todos os artigos
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap duas">
+    <div class="surge">
+      <p class="eyebrow">Avaliação</p>
+      <h2>Tudo começa por uma conversa <em>sem pressa.</em></h2>
+      <p class="lead">Na avaliação, examino seus olhos e pálpebras, ouço o que você espera e explico com clareza o que é possível para o seu caso.</p>
+      <a class="btn btn-ouro" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <dl class="dados surge">
+      <div><dt>Endereço</dt><dd><a href="https://www.google.com/maps/search/?api=1&query=Rua+Rio+Grande+do+Norte+1436+sala+1205+Savassi+Belo+Horizonte" rel="noopener">Rua Rio Grande do Norte, 1436, sala 1205<br>Savassi · Belo Horizonte</a></dd></div>
+      <div><dt>Telefone</dt><dd><a href="tel:+553133098710">(31) 3309-8710</a></dd></div>
+      <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5531984461501" rel="noopener">(31) 98446-1501</a></dd></div>
+      <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/drahelenafraga/" rel="noopener">@drahelenafraga</a></dd></div>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Dra. Helena Fraga</strong> · Oftalmologia · Plástica Ocular · CRM-MG 26838 · RQE 21631</p>
+    <p class="provisorio">Versão provisória para aprovação interna</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var corpo=document.body,abre=document.getElementById('abre-menu'),fecha=document.getElementById('fecha-menu'),gaveta=document.getElementById('gaveta');
+  function menu(aberto){corpo.classList.toggle('menu-aberto',aberto);abre.setAttribute('aria-expanded',aberto);gaveta.setAttribute('aria-hidden',!aberto);if(aberto){fecha.focus()}else{abre.focus()}}
+  abre.addEventListener('click',function(){menu(true)});
+  fecha.addEventListener('click',function(){menu(false)});
+  gaveta.addEventListener('click',function(e){if(e.target.closest('a')){corpo.classList.remove('menu-aberto');abre.setAttribute('aria-expanded',false);gaveta.setAttribute('aria-hidden',true)}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&corpo.classList.contains('menu-aberto')){menu(false)}});
+  var itens=document.querySelectorAll('.surge');
+  if(!('IntersectionObserver' in window)){itens.forEach(function(e){e.classList.add('dentro')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('dentro');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+  itens.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
