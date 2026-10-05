@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow, noarchive">
-<title>Dra. Helena Fraga · Plástica Ocular em Belo Horizonte</title>
-<meta name="description" content="Dra. Helena Fraga, oftalmologista especialista em plástica ocular. Blefaroplastia e cirurgia das pálpebras em Belo Horizonte.">
+<title>Blefaroplastia · Dra. Helena Fraga · Plástica Ocular</title>
+<meta name="description" content="Blefaroplastia em Belo Horizonte com a Dra. Helena Fraga, oftalmologista especialista em plástica ocular.">
 <meta name="theme-color" content="#F6F1E7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -325,6 +325,111 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
   .dados div{border-bottom:0}
   .rodape .wrap{grid-template-columns:1fr auto;align-items:end}
 }
+
+/* ══════ landing page: blocos próprios ══════ */
+.topo .ancoras{display:none}
+
+/* capa */
+.capa{padding:30px 0 0;overflow:hidden}
+.capa .wrap{display:grid;gap:0}
+.capa h1{font-size:clamp(2.7rem,11.6vw,5.1rem);line-height:1.02;color:var(--vinho);margin-top:20px}
+.capa .palco{margin:38px auto 0;width:min(74vw,380px)}
+.capa .arco::after{display:none}
+.capa .arco{aspect-ratio:3/3.7}
+.capa-acao{margin-top:34px}
+.capa-acao .btn{margin-top:28px;width:100%}
+.capa-acao small{display:block;margin-top:16px;text-align:center;font-size:12px;letter-spacing:.08em;color:var(--tinta-suave)}
+
+/* foto genérica (a substituir) */
+.foto-vaga{position:relative;display:grid;place-items:center;text-align:center;background:
+  radial-gradient(120% 80% at 30% 20%,rgba(212,183,122,.35),transparent 60%),
+  linear-gradient(160deg,#D8CBB3,#BFAE93);color:rgba(61,12,20,.72);overflow:hidden}
+.foto-vaga::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.12) 0 2px,transparent 2px 14px)}
+.foto-vaga span{position:relative;display:grid;gap:10px;justify-items:center;padding:18px;font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;line-height:1.6}
+.foto-vaga span::before{content:"";width:34px;height:26px;border:1px solid currentColor;border-radius:4px;background:radial-gradient(circle at 50% 55%,transparent 0 5px,currentColor 5px 6px,transparent 6px)}
+.foto-vaga.escura{background:radial-gradient(120% 80% at 70% 20%,rgba(212,183,122,.25),transparent 60%),linear-gradient(160deg,#5A1220,#3D0C14);color:rgba(237,227,210,.8)}
+
+/* para quem */
+.paraquem{background:var(--marfim)}
+.sinais{border-top:1px solid rgba(35,26,23,.16)}
+.sinais li{padding:22px 0;border-bottom:1px solid rgba(35,26,23,.16);display:grid;grid-template-columns:2.6em 1fr;align-items:baseline;font:400 clamp(1.2rem,5vw,1.6rem)/1.25 var(--serif)}
+.duo{margin-top:clamp(48px,10vw,88px);display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.duo .arco{aspect-ratio:3/4;margin-bottom:18px}
+.duo .arco.foto-vaga{border-radius:var(--arco)}
+.duo b{display:block;font:italic 400 1.6rem/1.1 var(--serif);color:var(--vinho);margin-bottom:8px}
+.duo p{font-size:15px;color:var(--tinta-suave)}
+
+/* quem opera: formação */
+.formacao{margin-top:40px;border-top:1px solid rgba(35,26,23,.16)}
+.formacao div{display:grid;grid-template-columns:5.6em 1fr;gap:14px;padding:14px 0;border-bottom:1px solid rgba(35,26,23,.16);font-size:15.5px}
+.formacao dt{font:400 1.1rem/1.4 var(--serif);color:var(--vinho)}
+.formacao dd{color:var(--tinta-suave)}
+
+/* a cirurgia */
+.cirurgia{background:var(--areia)}
+.passos{counter-reset:passo;display:grid;gap:0;border-top:1px solid rgba(35,26,23,.2)}
+.passos li{counter-increment:passo;padding:28px 0;border-bottom:1px solid rgba(35,26,23,.2);display:grid;grid-template-columns:3.4em 1fr;gap:4px 8px}
+.passos li::before{content:counter(passo,lower-roman) ".";font:italic 400 1.5rem/1.2 var(--serif);color:var(--ouro);grid-row:1/3}
+.passos b{font:400 clamp(1.5rem,6vw,2rem)/1.1 var(--serif);color:var(--vinho)}
+.passos span{color:var(--tinta-suave);font-size:15.5px}
+.fatos{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(35,26,23,.18);border:1px solid rgba(35,26,23,.18)}
+.fatos li{background:var(--areia);padding:24px 18px 26px}
+.fatos small{display:block;font-size:10.5px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro);margin-bottom:10px}
+.fatos b{font:400 1.35rem/1.15 var(--serif);color:var(--tinta);display:block}
+
+/* antes e depois com fotos genéricas */
+.compara .antes.foto-vaga,.compara .depois.foto-vaga{place-items:center}
+.compara .lado.foto-vaga span{font:500 10.5px/1.6 var(--sans);letter-spacing:.2em}
+.compara .antes.foto-vaga span{margin-right:50%}
+.compara .depois.foto-vaga span{margin-left:50%}
+.casos .foto-vaga{border:0;aspect-ratio:1/1}
+.casos .foto-vaga span{font-size:9.5px;padding:8px}
+
+/* perguntas */
+.faq{background:var(--marfim)}
+.faq details{border-top:1px solid rgba(35,26,23,.16)}
+.faq details:last-of-type{border-bottom:1px solid rgba(35,26,23,.16)}
+.faq summary{list-style:none;cursor:pointer;padding:24px 48px 24px 0;position:relative;font:400 clamp(1.25rem,5.2vw,1.6rem)/1.25 var(--serif);color:var(--tinta)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:8px;top:50%;width:11px;height:11px;border-right:1px solid var(--ouro);border-bottom:1px solid var(--ouro);transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-20%) rotate(-135deg)}
+.faq details p{padding:0 0 26px;color:var(--tinta-suave);max-width:40em}
+
+/* barra fixa (celular) */
+.barra{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:12px var(--gutter) calc(12px + env(safe-area-inset-bottom,0px));background:rgba(42,7,13,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid rgba(212,183,122,.25);transform:translateY(110%);transition:transform .35s ease}
+.barra.visivel{transform:none}
+.barra .btn{width:100%;min-height:50px}
+.rodape{padding-bottom:110px}
+
+@media (min-width:700px){
+  .capa-acao .btn{width:auto}
+  .capa-acao small{text-align:left}
+  .fatos{grid-template-columns:repeat(4,1fr)}
+  .passos{grid-template-columns:1fr 1fr;column-gap:56px}
+}
+@media (min-width:1000px){
+  .topo .ancoras{display:flex;gap:clamp(16px,2.2vw,32px)}
+  .topo .ancoras a{font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--tinta);padding:8px 0;border-bottom:1px solid transparent;transition:color .25s,border-color .25s}
+  .topo .ancoras a:hover{color:var(--vinho);border-color:var(--ouro)}
+  .barra{display:none}
+  .rodape{padding-bottom:44px}
+
+  .capa{padding-top:64px}
+  .capa .wrap{grid-template-columns:minmax(0,6fr) minmax(0,4.4fr);grid-template-rows:auto auto;column-gap:clamp(56px,7vw,110px);align-items:center}
+  .capa-texto{grid-column:1;grid-row:1;align-self:end}
+  .capa-acao{grid-column:1;grid-row:2;align-self:start}
+  .capa .palco{grid-column:2;grid-row:1/3;width:100%;max-width:440px;margin:0;justify-self:end}
+  .capa .selo-gira,.capa .selo-centro,.capa .selo-fundo{right:auto;left:-66px;top:auto;bottom:12%}
+
+  .paraquem .wrap,.quem .wrap,.faq .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(56px,7vw,104px);align-items:start}
+  .paraquem .cab,.quem .cab,.faq .cab{grid-template-columns:1fr;margin:0;position:sticky;top:120px}
+  .paraquem .cab .lead,.quem .cab .lead,.faq .cab .lead{justify-self:start}
+  .duo{gap:24px}
+  .passos{grid-template-columns:repeat(4,1fr);column-gap:0;border-top:0}
+  .passos li{align-content:start;grid-template-columns:1fr;border-bottom:0;border-top:1px solid rgba(35,26,23,.25);padding:26px 28px 0 0;gap:10px;position:relative}
+  .passos li::before{grid-row:auto}
+  .passos li::after{content:"";position:absolute;left:0;top:-5px;width:9px;height:9px;background:var(--areia);border:1px solid var(--ouro);transform:rotate(45deg)}
+}
 </style>
 </head>
 <body>
@@ -332,74 +437,91 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
 <header class="topo">
   <div class="wrap">
     <a class="marca" href="#inicio" aria-label="Início"><img src="img/logo.webp" alt="Helena Fraga · Plástica Ocular" width="148" height="74"></a>
-    <nav aria-label="Principal">
-      <ul>
-        <li><a href="#tratamentos">Tratamentos</a></li>
-        <li><a href="#resultados">Resultados</a></li>
-        <li><a href="#pai">PAI</a></li>
-        <li><a href="#depoimentos">Depoimentos</a></li>
-        <li><a href="#equipe">Equipe</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+    <nav class="ancoras" aria-label="Nesta página">
+      <a href="#para-quem">Para quem</a>
+      <a href="#cirurgia">A cirurgia</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#pai">Recuperação</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#perguntas">Perguntas</a>
     </nav>
-    <a class="btn btn-linha" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação</a>
-    <button class="abre-menu" id="abre-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="gaveta"><span></span></button>
+    <a class="btn btn-linha" style="display:inline-flex" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação</a>
   </div>
 </header>
 
-<div class="gaveta" id="gaveta" aria-hidden="true">
-  <button class="fecha-menu" id="fecha-menu" aria-label="Fechar menu">&times;</button>
-  <ul>
-    <li><a href="#tratamentos"><i>i.</i>Tratamentos</a></li>
-    <li><a href="#resultados"><i>ii.</i>Resultados</a></li>
-    <li><a href="#pai"><i>iii.</i>Assistência Intensiva</a></li>
-    <li><a href="#depoimentos"><i>iv.</i>Depoimentos</a></li>
-    <li><a href="#equipe"><i>v.</i>Equipe</a></li>
-    <li><a href="#contato"><i>vi.</i>Contato</a></li>
-  </ul>
-  <a class="btn btn-ouro" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação</a>
-</div>
-
 <main>
 
-<section class="abertura" id="inicio">
+<section class="capa" id="inicio">
   <div class="wrap">
-    <p class="eyebrow">Plástica ocular · Belo Horizonte</p>
+    <div class="capa-texto">
+      <p class="eyebrow">Blefaroplastia · Belo Horizonte</p>
+      <h1>O olhar que você reconhece, <em>descansado.</em></h1>
+    </div>
     <div class="palco">
       <div class="arco"><img src="img/mesa.jpg" alt="Dra. Helena Fraga" width="1200" height="654" fetchpriority="high"></div>
       <div class="selo-fundo"></div>
       <svg class="selo-gira" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs><text><textPath href="#circ">Dra. Helena Fraga · desde 1993 · </textPath></text></svg>
       <div class="selo-centro" aria-hidden="true">HF</div>
     </div>
-    <h1><span>Precisão</span><em>e delicadeza.</em></h1>
-    <div class="rodape-hero">
-      <p class="lead">Cirurgia plástica ocular por uma oftalmologista. Atendimento particular, do diagnóstico à recuperação completa.</p>
-      <div class="acoes">
-        <a class="btn btn-vinho" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação
-          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
-        </a>
-        <a class="elo" href="#tratamentos">Tratamentos</a>
-      </div>
+    <div class="capa-acao">
+      <p class="lead">Cirurgia das pálpebras conduzida por uma oftalmologista especialista em plástica ocular, com acompanhamento próximo do primeiro dia ao resultado final.</p>
+      <a class="btn btn-vinho" id="cta-capa" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+      <small>Atendimento particular · Savassi</small>
     </div>
   </div>
   <div class="faixa" aria-hidden="true">
     <div class="faixa-trilho">
-      <span>Blefaroplastia</span><span>Mid face lift</span><span>Bolsas sem corte na pele</span><span>Elevação das sobrancelhas</span><span>Reconstrução das pálpebras</span><span>Entrópio</span><span>Pterígio</span>
-      <span>Blefaroplastia</span><span>Mid face lift</span><span>Bolsas sem corte na pele</span><span>Elevação das sobrancelhas</span><span>Reconstrução das pálpebras</span><span>Entrópio</span><span>Pterígio</span>
+      <span>Pálpebras superiores</span><span>Pálpebras inferiores</span><span>Bolsas sem corte na pele</span><span>Para mulheres e homens</span><span>Recuperação acompanhada</span><span>Hospital de olhos</span>
+      <span>Pálpebras superiores</span><span>Pálpebras inferiores</span><span>Bolsas sem corte na pele</span><span>Para mulheres e homens</span><span>Recuperação acompanhada</span><span>Hospital de olhos</span>
     </div>
   </div>
 </section>
 
-<section class="manifesto" id="sobre">
+<section class="paraquem" id="para-quem">
   <div class="wrap">
-    <p class="eyebrow surge">Quem opera</p>
+    <div class="cab surge">
+      <div><p class="eyebrow">Para quem é</p><h2 style="margin-top:20px">Quando as pálpebras passam a falar <em>por você.</em></h2></div>
+      <p class="lead">Pálpebras pesadas dão ao rosto uma expressão de cansaço que não corresponde a como a pessoa se sente. A blefaroplastia corrige isso com precisão, preservando o que é seu.</p>
+    </div>
     <div>
-      <p class="frase" id="frase">Opero pálpebras conhecendo o olho que elas protegem. É o que me permite buscar um resultado <em>bonito</em> sem abrir mão da <em>função.</em></p>
-      <div class="assina surge">
-        <img src="img/mesa.jpg" alt="" width="64" height="64" loading="lazy">
-        <div><b>Dra. Helena Fraga</b><small>UFMG · CBO · SBCPO</small></div>
+      <ul class="sinais surge">
+        <li><span class="indice">i.</span>Excesso de pele nas pálpebras superiores</li>
+        <li><span class="indice">ii.</span>Bolsas de gordura sob os olhos</li>
+        <li><span class="indice">iii.</span>Aparência constante de cansaço ou sono</li>
+        <li><span class="indice">iv.</span>Sensação de peso ou redução do campo de visão</li>
+      </ul>
+      <div class="duo surge">
+        <div>
+          <div class="arco foto-vaga"><span>Foto genérica<br>paciente mulher</span></div>
+          <b>Para ela</b>
+          <p>Aliviar o peso das pálpebras e as bolsas, mantendo a expressão que sempre foi sua.</p>
+        </div>
+        <div>
+          <div class="arco foto-vaga escura"><span>Foto genérica<br>paciente homem</span></div>
+          <b>Para ele</b>
+          <p>Abrir o olhar preservando os traços masculinos, sem aspecto de quem operou.</p>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="manifesto quem" id="quem-opera" style="background:var(--linho)">
+  <div class="wrap" style="display:block">
+    <p class="eyebrow surge" style="margin-bottom:26px">Quem opera</p>
+    <p class="frase" id="frase">Quem conhece o olho por dentro opera a pálpebra de outro modo: buscando um resultado <em>bonito</em> sem abrir mão da <em>função.</em></p>
+    <div class="assina surge">
+      <img src="img/mesa.jpg" alt="" width="64" height="64" loading="lazy">
+      <div><b>Dra. Helena Fraga</b><small>CRM-MG 26838 · RQE 21631</small></div>
+    </div>
+    <dl class="formacao surge" style="max-width:640px">
+      <div><dt>UFMG</dt><dd>Medicina e residência em Oftalmologia</dd></div>
+      <div><dt>Fellowship</dt><dd>Retina e plástica ocular</dd></div>
+      <div><dt>CBO</dt><dd>Especialista em Oftalmologia</dd></div>
+      <div><dt>SBCPO</dt><dd>Especialista em cirurgia plástica ocular</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -414,20 +536,24 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
   </div>
 </section>
 
-<section class="tratamentos" id="tratamentos">
+<section class="cirurgia" id="cirurgia">
   <div class="wrap">
     <div class="cab surge">
-      <div><p class="eyebrow">Tratamentos</p><h2 style="margin-top:20px">Estética e saúde das pálpebras, <em>no mesmo cuidado.</em></h2></div>
-      <p class="lead">Da cirurgia estética à reconstrução, cada indicação começa por uma avaliação completa dos seus olhos.</p>
+      <div><p class="eyebrow">A cirurgia</p><h2 style="margin-top:20px">Discreta do início <em>ao fim.</em></h2></div>
+      <p class="lead">Um procedimento breve, em hospital de olhos, planejado para que você volte para casa no mesmo dia.</p>
     </div>
-    <div class="lista-trat surge">
-      <a href="../blefaroplastia-v2/"><span class="indice">i.</span><h3>Blefaroplastia</h3><p>Cirurgia das pálpebras para corrigir o excesso de pele e as bolsas que pesam sobre o olhar.</p><span class="seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-      <a href="https://drahelenafraga.com.br/especialidades/mid-face-lift-associada-a-blefaroplastia/"><span class="indice">ii.</span><h3>Mid face lift</h3><p>Elevação do terço médio da face, associada à cirurgia das pálpebras.</p><span class="seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-      <a href="https://drahelenafraga.com.br/especialidades/retiradas-de-bolsas-palpebrais-via-conjuntival-sem-corte-na-pele/"><span class="indice">iii.</span><h3>Bolsas sem corte na pele</h3><p>Retirada das bolsas palpebrais por via conjuntival, sem incisão externa.</p><span class="seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-      <a href="https://drahelenafraga.com.br/especialidades/elevacao-das-sobrancelhas/"><span class="indice">iv.</span><h3>Elevação das sobrancelhas</h3><p>Reposicionamento que devolve abertura e leveza ao terço superior do rosto.</p><span class="seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-      <a class="menor" href="https://drahelenafraga.com.br/especialidades/reconstrucao-das-palpebras/"><span class="indice">v.</span><h3>Reconstrução e tumores das pálpebras</h3><p>Ressecção de tumores palpebrais e conjuntivais, com reconstrução.</p><span class="seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-      <a class="menor" href="https://drahelenafraga.com.br/especialidades/correcao-de-entropio-das-palpebras/"><span class="indice">vi.</span><h3>Entrópio e pterígio</h3><p>Correção funcional, com uso de cola biológica quando indicado.</p><span class="seta"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></a>
-    </div>
+    <ol class="passos surge">
+      <li><b>Avaliação</b><span>Exame completo dos olhos e das pálpebras e um plano desenhado para o seu rosto.</span></li>
+      <li><b>Cirurgia</b><span>De uma a duas horas, com anestesia local associada a sedação.</span></li>
+      <li><b>Alta no mesmo dia</b><span>Você permanece no hospital por cerca de uma hora e volta para casa.</span></li>
+      <li><b>Acompanhamento</b><span>Noventa dias de cuidado com toda a equipe, pelo Programa de Assistência Intensiva.</span></li>
+    </ol>
+    <ul class="fatos surge">
+      <li><small>Duração</small><b>Uma a duas horas</b></li>
+      <li><small>Anestesia</small><b>Local com sedação</b></li>
+      <li><small>Internação</small><b>Não é necessária</b></li>
+      <li><small>Rotina</small><b>Sem exercício e maquiagem por 30 dias</b></li>
+    </ul>
   </div>
 </section>
 
@@ -435,16 +561,20 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
   <div class="wrap">
     <div class="cab surge">
       <div><p class="eyebrow">Resultados</p><h2 style="margin-top:20px">Antes <em>e depois.</em></h2></div>
-      <p class="lead">Arraste a linha para comparar. Cada caso traz a indicação e o tempo de recuperação.<br><span class="aguarda">Aguardando fotos autorizadas</span></p>
+      <p class="lead">Arraste a linha para comparar. Cada caso traz a indicação e o tempo de recuperação.</p>
     </div>
     <div class="surge">
       <div class="compara" id="compara">
-        <div class="lado antes"><span>Antes</span></div>
-        <div class="lado depois"><span>Depois</span></div>
+        <div class="lado antes foto-vaga"><span>Foto genérica<br>antes</span></div>
+        <div class="lado depois foto-vaga escura"><span>Foto genérica<br>depois</span></div>
         <div class="divisor"></div>
         <input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois">
       </div>
-      <div class="casos"><div>Caso 1<br>mulher</div><div>Caso 2<br>homem</div><div>Caso 3<br>mulher</div></div>
+      <div class="casos">
+        <div class="foto-vaga"><span>Caso 1<br>mulher</span></div>
+        <div class="foto-vaga escura"><span>Caso 2<br>homem</span></div>
+        <div class="foto-vaga"><span>Caso 3<br>mulher</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -452,14 +582,12 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
 <section class="pai escuro" id="pai">
   <div class="wrap">
     <div class="cab surge">
-      <div><p class="eyebrow">Programa de Assistência Intensiva</p><h2 style="margin-top:20px">Noventa dias ao seu lado, <em>não apenas uma cirurgia.</em></h2></div>
-      <p class="lead">O PAI reúne toda a equipe da clínica em torno da sua recuperação, presencialmente e à distância.</p>
-      <a class="elo" href="https://drahelenafraga.com.br/pai-programa-de-assistencia-intensiva/" style="justify-self:start;margin-top:0">Conhecer o programa
-        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <div><p class="eyebrow">Programa de Assistência Intensiva</p><h2 style="margin-top:20px">O cuidado não termina <em>na sala de cirurgia.</em></h2></div>
+      <p class="lead">O PAI conduz a sua recuperação por noventa dias, presencialmente e à distância, com toda a equipe da clínica ao seu alcance.</p>
     </div>
     <ol class="linha-tempo" id="linha-tempo">
       <li class="surge"><b>Primeiro dia</b><span>Cuidados intensificados, com tecnologias voltadas à recuperação imediata.</span></li>
-      <li class="surge"><b>Primeiras semanas</b><span>Reavaliações contínuas, drenagens linfáticas, laser e fototerapia.</span></li>
+      <li class="surge"><b>Primeiras semanas</b><span>Reavaliações contínuas, drenagens linfáticas faciais, laser de baixa potência e fototerapia com LED.</span></li>
       <li class="surge"><b>Todos os dias</b><span>Um grupo exclusivo com toda a equipe, para qualquer dúvida.</span></li>
       <li class="surge"><b>Noventa dias</b><span>Acompanhamento até o resultado final, com fonoaudióloga e enfermeira esteta.</span></li>
     </ol>
@@ -477,8 +605,8 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
       <div class="controles"><button id="volta" aria-label="Anterior"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 8H3M7 4L3 8l4 4"/></svg></button><button id="avanca" aria-label="Próximo"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button></div>
     </div>
     <div class="trilho surge" id="trilho">
-      <article class="voz"><blockquote>Dra. Helena é extremamente atenciosa e tem uma relação afetiva inigualável com seus pacientes, além de possuir uma infraestrutura incrível, um ambiente maravilhoso e claro, um acolhimento indispensável de toda a equipe.</blockquote><footer><span class="inicial">M</span><div><b>Márcio Magalhães</b><small>Avaliação no Google</small></div></footer></article>
       <article class="voz"><blockquote>Ela transmite uma confiança muito grande, tem muita experiência e é muito comunicativa. Fiz uma blefaroplastia, estou muito satisfeita com o resultado da cirurgia e também pelo acompanhamento pós-cirúrgico.</blockquote><footer><span class="inicial">R</span><div><b>Rúbia Guerra</b><small>Avaliação no Google</small></div></footer></article>
+      <article class="voz"><blockquote>Dra. Helena é extremamente atenciosa e tem uma relação afetiva inigualável com seus pacientes, além de possuir uma infraestrutura incrível, um ambiente maravilhoso e claro, um acolhimento indispensável de toda a equipe.</blockquote><footer><span class="inicial">M</span><div><b>Márcio Magalhães</b><small>Avaliação no Google</small></div></footer></article>
       <article class="voz"><blockquote>Sinto-me segura com o acolhimento dado, os tratamentos feitos, as orientações fornecidas, tudo isso em um ambiente amistoso onde sou tratada com muito carinho por toda a equipe.</blockquote><footer><span class="inicial">M</span><div><b>Marta d'Ávila</b><small>Avaliação no Google</small></div></footer></article>
       <article class="voz"><blockquote>Dra. Helena é extremamente gentil, cuidadosa e muito eficiente. Estou muito feliz com o procedimento realizado e com o seu carinho.</blockquote><footer><span class="inicial">C</span><div><b>Carolina Cabral</b><small>Avaliação no Google</small></div></footer></article>
       <article class="voz"><blockquote>Atendimento muito atencioso e claro, as orientações quanto à cirurgia e os resultados esperados. Valeu muito pelo carinho e atenção.</blockquote><footer><span class="inicial">D</span><div><b>Dilce Maria</b><small>Avaliação no Google</small></div></footer></article>
@@ -491,13 +619,13 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
   <div class="wrap">
     <div class="cab surge">
       <div><p class="eyebrow">Mensagens de pacientes</p><h2 style="margin-top:20px">O que chega depois <em>da cirurgia.</em></h2></div>
-      <p class="lead">Mensagens recebidas pela equipe durante o acompanhamento, publicadas com autorização.<br><span class="aguarda">Aguardando prints de WhatsApp</span></p>
+      <p class="lead">Mensagens recebidas pela equipe durante o acompanhamento, publicadas com autorização.</p>
     </div>
     <div class="aparelho surge">
       <div class="barra-topo"><img src="img/mesa.jpg" alt="" width="38" height="38" loading="lazy"><div><b>Dra. Helena Fraga</b><small>Acompanhamento PAI</small></div></div>
-      <p class="balao vago">Mensagem do paciente (a inserir)<time>09:12</time></p>
-      <p class="balao dela vago">Resposta da equipe (a inserir)<time>09:20</time></p>
-      <p class="balao vago">Mensagem do paciente (a inserir)<time>18:47</time></p>
+      <p class="balao vago">Texto genérico: mensagem do paciente no terceiro dia.<time>09:12</time></p>
+      <p class="balao dela vago">Texto genérico: resposta da equipe.<time>09:20</time></p>
+      <p class="balao vago">Texto genérico: mensagem do paciente após um mês.<time>18:47</time></p>
     </div>
   </div>
 </section>
@@ -506,13 +634,13 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
   <div class="wrap">
     <div class="cab surge">
       <div><p class="eyebrow">Equipe</p><h2 style="margin-top:20px">As pessoas que cuidam <em>de você.</em></h2></div>
-      <p class="lead">Do primeiro contato ao último retorno, você fala sempre com as mesmas pessoas.<br><span class="aguarda">Aguardando fotos e nomes da equipe</span></p>
+      <p class="lead">Do primeiro contato ao último retorno, você fala sempre com as mesmas pessoas.</p>
     </div>
     <div class="pessoas surge">
       <div class="pessoa"><div class="arco"><img src="img/mesa.jpg" alt="Dra. Helena Fraga" width="1200" height="654" loading="lazy"></div><b>Dra. Helena Fraga</b><small>Cirurgiã</small></div>
-      <div class="pessoa"><div class="arco vago">?</div><b>Nome</b><small>Enfermeira esteta</small></div>
-      <div class="pessoa"><div class="arco vago">?</div><b>Nome</b><small>Fonoaudióloga</small></div>
-      <div class="pessoa"><div class="arco vago">?</div><b>Nome</b><small>Atendimento</small></div>
+      <div class="pessoa"><div class="arco foto-vaga"><span>Foto genérica</span></div><b>Nome</b><small>Enfermeira esteta</small></div>
+      <div class="pessoa"><div class="arco foto-vaga"><span>Foto genérica</span></div><b>Nome</b><small>Fonoaudióloga</small></div>
+      <div class="pessoa"><div class="arco foto-vaga"><span>Foto genérica</span></div><b>Nome</b><small>Atendimento</small></div>
     </div>
   </div>
 </section>
@@ -533,12 +661,27 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
   </div>
 </section>
 
-<section class="contato" id="contato">
+<section class="faq" id="perguntas">
+  <div class="wrap">
+    <div class="cab surge">
+      <div><p class="eyebrow">Perguntas frequentes</p><h2 style="margin-top:20px">O que costumam me perguntar <em>na consulta.</em></h2></div>
+    </div>
+    <div class="surge">
+      <details><summary>A cirurgia dói?</summary><p>Em geral, não. Costuma haver uma perda transitória de sensibilidade ao redor das incisões, e por isso a dor não é uma queixa habitual.</p></details>
+      <details><summary>Vou ficar com inchaço e roxo?</summary><p>Algum grau é esperado. As bandagens aplicadas logo após o procedimento e o Programa de Assistência Intensiva existem para reduzir esses sinais e encurtar a recuperação.</p></details>
+      <details><summary>Quando retomo a rotina?</summary><p>Atividade física e maquiagem ficam suspensas por trinta dias. As demais orientações são definidas para o seu caso, na consulta.</p></details>
+      <details><summary>Meus olhos vão fechar normalmente?</summary><p>Sim. A blefaroplastia é feita para melhorar a abertura dos olhos sem comprometer o fechamento adequado das pálpebras.</p></details>
+      <details><summary>Preciso ficar internado?</summary><p>Não. Você permanece no hospital de olhos, em média, por cerca de uma hora após o término da cirurgia.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="avaliacao">
   <div class="wrap">
     <p class="eyebrow surge">Avaliação</p>
     <h2 class="surge">Tudo começa por uma conversa <em>sem pressa.</em></h2>
-    <p class="lead surge">Na avaliação, examino seus olhos e pálpebras, ouço o que você espera e explico com clareza o que é possível para o seu caso.</p>
-    <a class="btn btn-ouro surge" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação
+    <p class="lead surge">Na avaliação, examino seus olhos e pálpebras, ouço o que você espera e explico com clareza o que a cirurgia pode fazer por você.</p>
+    <a class="btn btn-ouro surge" id="cta-final" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
     </a>
     <dl class="dados surge">
@@ -559,15 +702,12 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
   </div>
 </footer>
 
+<div class="barra" id="barra">
+  <a class="btn btn-ouro" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20avalia%C3%A7%C3%A3o%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Solicitar avaliação</a>
+</div>
+
 <script>
 (function(){
-  var corpo=document.body,abre=document.getElementById('abre-menu'),fecha=document.getElementById('fecha-menu'),gaveta=document.getElementById('gaveta');
-  function menu(a){corpo.classList.toggle('menu-aberto',a);abre.setAttribute('aria-expanded',a);gaveta.setAttribute('aria-hidden',!a);(a?fecha:abre).focus()}
-  abre.addEventListener('click',function(){menu(true)});
-  fecha.addEventListener('click',function(){menu(false)});
-  gaveta.addEventListener('click',function(e){if(e.target.closest('a')){corpo.classList.remove('menu-aberto');abre.setAttribute('aria-expanded',false);gaveta.setAttribute('aria-hidden',true)}});
-  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&corpo.classList.contains('menu-aberto'))menu(false)});
-
   /* antes e depois */
   var cmp=document.getElementById('compara');
   cmp.querySelector('input').addEventListener('input',function(){cmp.style.setProperty('--pos',this.value+'%')});
@@ -578,7 +718,7 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
   document.getElementById('volta').addEventListener('click',function(){passo(-1)});
   document.getElementById('avanca').addEventListener('click',function(){passo(1)});
 
-  /* frase do manifesto: palavra a palavra */
+  /* frase: palavra a palavra */
   var frase=document.getElementById('frase'),calmo=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   (function fatia(no){
     Array.prototype.slice.call(no.childNodes).forEach(function(f){
@@ -586,26 +726,31 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
       else if(f.nodeType===1){fatia(f)}
     });
   })(frase);
-  var palavras=frase.querySelectorAll('.p');
+  var palavras=frase.querySelectorAll('.p'),barra=document.getElementById('barra');
 
   if(!('IntersectionObserver' in window)||calmo){
-    document.querySelectorAll('.surge,.cortina,.linha-tempo').forEach(function(e){e.classList.add('dentro')});
-    palavras.forEach(function(p){p.style.opacity=1});return;
+    document.querySelectorAll('.surge,.linha-tempo').forEach(function(e){e.classList.add('dentro')});
+    palavras.forEach(function(p){p.style.opacity=1});
+    if(!('IntersectionObserver' in window)){barra.classList.add('visivel');return}
+  }else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('dentro');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.surge,.linha-tempo').forEach(function(e){io.observe(e)});
+    new IntersectionObserver(function(es,o){if(es[0].isIntersecting){palavras.forEach(function(p,i){setTimeout(function(){p.style.opacity=1},i*70)});o.disconnect()}},{threshold:.4}).observe(frase);
+    function conta(el){
+      var ate=parseFloat(el.dataset.ate),casas=+(el.dataset.casas||0),suf=el.dataset.sufixo||'',t0=null,dur=1600;
+      function fmt(v){return casas?v.toFixed(casas).replace('.',','):Math.round(v).toLocaleString('pt-BR')}
+      function q(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/dur);k=1-Math.pow(1-k,3);el.textContent=fmt(ate*k)+suf;if(k<1)requestAnimationFrame(q)}
+      requestAnimationFrame(q);
+    }
+    var nio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){conta(e.target);nio.unobserve(e.target)}})},{threshold:.6});
+    document.querySelectorAll('.numeros strong').forEach(function(e){nio.observe(e)});
   }
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('dentro');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});
-  document.querySelectorAll('.surge,.cortina,.linha-tempo').forEach(function(e){io.observe(e)});
 
-  new IntersectionObserver(function(es,o){if(es[0].isIntersecting){palavras.forEach(function(p,i){setTimeout(function(){p.style.opacity=1},i*70)});o.disconnect()}},{threshold:.4}).observe(frase);
-
-  /* contagem dos números */
-  function conta(el){
-    var ate=parseFloat(el.dataset.ate),casas=+(el.dataset.casas||0),suf=el.dataset.sufixo||'',t0=null,dur=1600;
-    function fmt(v){return casas?v.toFixed(casas).replace('.',','):Math.round(v).toLocaleString('pt-BR')}
-    function q(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/dur);k=1-Math.pow(1-k,3);el.textContent=fmt(ate*k)+suf;if(k<1)requestAnimationFrame(q)}
-    requestAnimationFrame(q);
-  }
-  var nio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){conta(e.target);nio.unobserve(e.target)}})},{threshold:.6});
-  document.querySelectorAll('.numeros strong').forEach(function(e){nio.observe(e)});
+  /* barra fixa: some enquanto um botão principal está na tela */
+  var vistos={a:true,b:false};
+  function atualiza(){barra.classList.toggle('visivel',!vistos.a&&!vistos.b)}
+  new IntersectionObserver(function(es){vistos.a=es[0].isIntersecting;atualiza()}).observe(document.getElementById('cta-capa'));
+  new IntersectionObserver(function(es){vistos.b=es[0].isIntersecting;atualiza()}).observe(document.getElementById('cta-final'));
 })();
 </script>
 </body>
