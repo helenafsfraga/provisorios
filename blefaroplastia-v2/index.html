@@ -353,6 +353,12 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
 .paraquem{background:var(--marfim)}
 .sinais{border-top:1px solid rgba(35,26,23,.16)}
 .sinais li{padding:22px 0;border-bottom:1px solid rgba(35,26,23,.16);display:grid;grid-template-columns:2.6em 1fr;align-items:baseline;font:400 clamp(1.2rem,5vw,1.6rem)/1.25 var(--serif)}
+.cada{margin-top:clamp(48px,10vw,88px)}
+.cada .foto-vaga{aspect-ratio:4/3;border-radius:var(--arco)}
+.cada figcaption{margin-top:28px;padding-left:22px;border-left:1px solid var(--ouro)}
+.cada h3{font-size:clamp(1.6rem,6.4vw,2.2rem);line-height:1.12;color:var(--vinho)}
+.cada h3 em{font-style:italic;color:var(--ouro)}
+.cada p{margin-top:14px;color:var(--tinta-suave)}
 .duo{margin-top:clamp(48px,10vw,88px);display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .duo .arco{aspect-ratio:3/4;margin-bottom:18px}
 .duo .arco.foto-vaga{border-radius:var(--arco)}
@@ -492,18 +498,13 @@ h1 em,h2 em{font-style:italic;font-weight:400;color:var(--ouro)}
         <li><span class="indice">iii.</span>Aparência constante de cansaço ou sono</li>
         <li><span class="indice">iv.</span>Sensação de peso ou redução do campo de visão</li>
       </ul>
-      <div class="duo surge">
-        <div>
-          <div class="arco foto-vaga"><span>Foto genérica<br>paciente mulher</span></div>
-          <b>Para ela</b>
-          <p>Aliviar o peso das pálpebras e as bolsas, mantendo a expressão que sempre foi sua.</p>
-        </div>
-        <div>
-          <div class="arco foto-vaga escura"><span>Foto genérica<br>paciente homem</span></div>
-          <b>Para ele</b>
-          <p>Abrir o olhar preservando os traços masculinos, sem aspecto de quem operou.</p>
-        </div>
-      </div>
+      <figure class="cada surge">
+        <div class="foto-vaga"><span>Foto genérica<br>uma paciente e um paciente, mesma imagem</span></div>
+        <figcaption>
+          <h3>O mesmo cuidado, um desenho <em>para cada rosto.</em></h3>
+          <p>Nas mulheres, alivio o peso das pálpebras e as bolsas mantendo a expressão que sempre foi delas. Nos homens, abro o olhar preservando os traços masculinos, sem aspecto de quem operou.</p>
+        </figcaption>
+      </figure>
     </div>
   </div>
 </section>
