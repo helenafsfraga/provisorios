@@ -556,6 +556,22 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 .trilho-audio{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
 .trilho-audio::-webkit-scrollbar{display:none}
 .trilho-audio .audio{flex:0 0 min(84vw,360px);scroll-snap-align:start;padding:20px 22px}
+/* revisao por audio 1 */
+.selo-gira,.selo-centro,.selo-fundo{left:auto;right:-30px}
+.cartao-dra{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:34px}
+.cartao-dra img{width:150px;height:auto}
+.cartao-dra b{display:block;font:500 clamp(1.5rem,6vw,2rem)/1.15 var(--serif);color:var(--vinho)}
+.cartao-dra small{display:block;margin-top:6px;font-size:14px;font-weight:500;letter-spacing:.1em;color:var(--tinta-suave)}
+.fatos span{display:block;margin-top:8px;font-size:15px;color:var(--tinta-suave)}
+.destaque-acomp{margin-top:14px;display:flex;align-items:center;gap:18px;padding:24px 26px;background:var(--bordo);color:#FBF6EC;font:500 clamp(1.15rem,4.6vw,1.45rem)/1.3 var(--serif)}
+.destaque-acomp svg{width:34px;height:34px;flex:none;color:var(--ouro-claro)}
+@media (min-width:700px){
+  .numeros.tres ul{grid-template-columns:repeat(3,1fr)}
+  .dados.tres{grid-template-columns:repeat(3,1fr)}
+}
+@media (min-width:1000px){
+  .capa .selo-gira,.capa .selo-centro,.capa .selo-fundo{left:auto;right:-66px}
+}
 </style>
 </head>
 <body>
@@ -590,7 +606,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
       <div class="selo-centro" aria-hidden="true">HF</div>
     </div>
     <div class="capa-acao">
-      <p class="lead">Mais de 30 anos de experiência em oftalmoplástica.</p>
+      <p class="lead">30+ anos de experiência em oftalmoplástica.</p>
       <p class="assina-capa">Dra. Helena Fraga · Oftalmologista · CRM-MG 26838 · RQE 21631</p>
       <a class="btn btn-verde" id="cta-capa" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Agendar consulta
         <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
@@ -610,7 +626,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
   <div class="wrap">
     <div class="cab surge">
       <div><h2>Necessidades <em>e indicações</em></h2></div>
-      <p class="lead">O que me dizem as pessoas que querem operar.</p>
+      <p class="lead">O que as pessoas que desejam operar falam:</p>
       <a class="btn btn-verde cta" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar consulta</a>
     </div>
     <div>
@@ -645,7 +661,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
     <div class="perfil-foto surge"><div class="foto-vaga arco-f"><span>Foto genérica<br>paciente mulher</span></div></div>
     <div class="surge">
       <h2 style="margin:0 0 24px">Blefaroplastia <em>feminina</em></h2>
-      <p class="lead">O objetivo é um olhar mais leve, aberto e sorridente, com o aspecto natural preservado, sem parecer que operou.</p>
+      <p class="lead">O objetivo é não parecer que operou. Ficar com um olhar mais leve, aberto e sorridente.</p>
       <ul class="pontos">
         <li>Olhar belo, rejuvenescido e descansado</li>
         <li>Aspecto natural preservado</li>
@@ -661,8 +677,8 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
     <div class="perfil-foto surge"><div class="foto-vaga escura quadro-m"><span>Foto genérica<br>paciente homem</span></div></div>
     <div class="surge">
       <h2 style="margin:0 0 24px">Blefaroplastia <em>masculina</em></h2>
-      <p class="lead">No rosto masculino, a cirurgia preserva o olhar alegre, aberto, jovial e resolvido.</p>
-      <p class="rotulo">Retira:</p>
+      <p class="lead">No rosto masculino, a cirurgia preserva o olhar aberto, jovial e resolvido.</p>
+      <p class="rotulo">Remove:</p>
       <ul class="pontos">
         <li>O peso</li>
         <li>O cansaço</li>
@@ -677,11 +693,11 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 <section class="manifesto quem" id="quem-opera" style="background:var(--linho)">
   <div class="wrap" style="display:block">
     <p class="eyebrow surge" style="margin-bottom:26px">Quem opera</p>
-    <p class="frase" id="frase">Oftalmoplástica com conhecimentos em <em>clínica, ortomolecular e medicina regenerativa.</em></p>
-    <div class="assina surge">
-      <img src="img/mesa.jpg" alt="" width="64" height="64" loading="lazy">
+    <div class="cartao-dra surge">
+      <img src="img/logo.webp" alt="Helena Fraga · Plástica Ocular" width="148" height="74" loading="lazy">
       <div><b>Dra. Helena Fraga</b><small>CRM-MG 26838 · RQE 21631</small></div>
     </div>
+    <p class="frase" id="frase">Oftalmoplástica com experiência em <em>clínica, ortomolecular e medicina regenerativa.</em></p>
     <dl class="formacao surge" style="max-width:640px">
       <div><dt>UFMG</dt><dd>Medicina e residência em Oftalmologia</dd></div>
       <div><dt>Fellowship</dt><dd>Retina e plástica ocular</dd></div>
@@ -692,12 +708,11 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
   </div>
 </section>
 
-<section class="numeros" aria-label="Trajetória">
+<section class="numeros tres" aria-label="Trajetória">
   <div class="wrap">
     <ul>
-      <li><strong data-ate="20000" data-sufixo="+">20.000+</strong><span>cirurgias realizadas</span></li>
+      <li><strong data-ate="30000" data-sufixo="+">30.000+</strong><span>cirurgias realizadas</span></li>
       <li><strong data-ate="33" data-sufixo="+">33+</strong><span>anos de medicina</span></li>
-      <li><strong>UFMG</strong><span>formação e residência</span></li>
       <li><strong data-ate="4.9" data-casas="1">4,9</strong><span>avaliação no Google</span></li>
     </ul>
   </div>
@@ -707,20 +722,14 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
   <div class="wrap">
     <div class="cab surge">
       <div><h2>Como é <em>a cirurgia</em></h2></div>
-      <p class="lead">As etapas, da consulta à volta à rotina.</p>
     </div>
-    <ol class="passos surge">
-      <li><b>Avaliação</b><span>Exame completo dos olhos e das pálpebras.</span></li>
-      <li><b>Cirurgia</b><span>BlefaroARTE, cirurgia de pálpebras estruturada.</span></li>
-      <li><b>Alta no mesmo dia</b><span>Você volta para casa cerca de uma hora após a cirurgia.</span></li>
-      <li><b>Acompanhamento</b><span>Personalizado, por grupo individualizado de WhatsApp com a Dra. Helena e a equipe multidisciplinar.</span></li>
-    </ol>
     <ul class="fatos surge">
-      <li><small>Duração</small><b>Uma a duas horas</b></li>
+      <li><small>Duração</small><b>1 a 3 horas</b><span>Alta no mesmo dia</span></li>
       <li><small>Anestesia</small><b>Local com sedação</b></li>
       <li><small>Local da cirurgia</small><b>Hospital de olhos</b></li>
       <li><small>Rotina</small><b>Volta em 3 a 5 dias</b></li>
     </ul>
+    <p class="destaque-acomp surge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>Acompanhamento personalizado em grupo de WhatsApp com a Dra. Helena e equipe multidisciplinar.</span></p>
 <a class="btn btn-verde cta" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar consulta</a>
   </div>
 </section>
@@ -774,14 +783,14 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 <section class="pai escuro" id="pai">
   <div class="wrap">
     <div class="cab surge">
-      <div><h2>Recuperação acompanhada <em>de perto</em></h2></div>
-      <p class="lead">A equipe da clínica acompanha a sua recuperação presencialmente e à distância. A duração é definida conforme a necessidade de cada paciente.</p>
+      <div><p class="eyebrow">Exclusividade · incluso na cirurgia</p><h2 style="margin-top:20px">Recuperação acompanhada <em>de perto</em></h2></div>
+      <p class="lead">Além da cirurgia, fazemos o acompanhamento personalizado em grupo individualizado de WhatsApp, com a Dra. Helena e equipe multidisciplinar, com acesso 24 horas por dia.</p>
     </div>
     <ol class="linha-tempo" id="linha-tempo">
-      <li class="surge"><b>Primeiro dia</b><span>Cuidados intensificados para a recuperação imediata.</span></li>
-      <li class="surge"><b>Primeiras semanas</b><span>Retornos individualizados, drenagens linfáticas e fotobiomodulação.</span></li>
-      <li class="surge"><b>Todos os dias</b><span>Grupo de WhatsApp individualizado e exclusivo, com a Dra. Helena e a equipe multidisciplinar.</span></li>
-      <li class="surge"><b>Até a alta</b><span>Pelo tempo que o seu caso precisar, com fisioterapeuta, biomédica esteta, enfermeira e médicos da equipe.</span></li>
+      <li class="surge"><b>Primeiro dia</b><span>Cuidados intensificados para recuperação rápida.</span></li>
+      <li class="surge"><b>Primeiras semanas</b><span>Drenagens linfáticas, fotobiomodulação e retornos personalizados.</span></li>
+      <li class="surge"><b>Todos os dias</b><span>Grupo de WhatsApp exclusivo com a Dra. Helena e equipe multidisciplinar.</span></li>
+      <li class="surge"><b>Até a alta</b><span>Pelo tempo que for preciso, com fisioterapeuta, biomédica esteta, enfermeira e médicos da equipe.</span></li>
     </ol>
 <a class="btn btn-verde cta" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar consulta</a>
   </div>
@@ -906,11 +915,11 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
       <div><h2>Perguntas <em>frequentes</em></h2></div>
     </div>
     <div class="surge">
-      <details><summary>A cirurgia dói?</summary><p>Em geral, não. Costuma haver uma perda transitória de sensibilidade ao redor das incisões, e por isso a dor não é uma queixa habitual.</p></details>
-      <details><summary>Vou ficar com inchaço e roxo?</summary><p>Algum grau é esperado. As bandagens aplicadas logo após o procedimento e o acompanhamento da equipe existem para reduzir esses sinais e encurtar a recuperação.</p></details>
-      <details><summary>Quando retomo a rotina?</summary><p>A volta à rotina acontece em 3 a 5 dias. Atividade física e maquiagem ficam suspensas por trinta dias.</p></details>
+      <details><summary>A cirurgia dói?</summary><p>Em geral, não dói. O que há é uma perda transitória de sensibilidade ao redor dos cortes, e por isso a dor não é uma queixa habitual.</p></details>
+      <details><summary>Vou ficar com inchaço e roxo?</summary><p>Algum grau é esperado. Com as bandagens que fazemos logo após a cirurgia e o nosso acompanhamento exclusivo, o inchaço reduz muito e pode não haver roxo.</p></details>
+      <details><summary>Quando retorno à rotina?</summary><p>Em média, de 3 a 5 dias. A volta à atividade física é avaliada individualmente.</p></details>
       <details><summary>Meus olhos vão fechar normalmente?</summary><p>Sim. A blefaroplastia é feita para melhorar a abertura dos olhos sem comprometer o fechamento adequado das pálpebras.</p></details>
-      <details><summary>Preciso ficar internado?</summary><p>Não. Você permanece no hospital de olhos, em média, por cerca de uma hora após o término da cirurgia.</p></details>
+      <details><summary>Preciso ficar internado?</summary><p>Não. Você permanece no hospital de olhos, em média, por cerca de uma hora após o término da cirurgia, até a melhora da sedação.</p></details>
       <a class="btn btn-verde cta" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar consulta</a>
     </div>
   </div>
@@ -918,16 +927,15 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 
 <section class="contato" id="avaliacao">
   <div class="wrap">
-    <h2 class="surge">Agende <em>sua consulta</em></h2>
-    <p class="lead surge">Na consulta, examino seus olhos e pálpebras e explico com clareza o que a cirurgia pode fazer no seu caso.</p>
+    <h2 class="surge" style="max-width:15em">Na consulta, vamos descobrir como valorizar <em>sua beleza natural.</em></h2>
     <a class="btn btn-verde surge" id="cta-final" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener">Agendar consulta
       <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
     </a>
     <dl class="dados surge">
       <div><dt>Endereço</dt><dd><a href="https://www.google.com/maps/search/?api=1&query=Rua+Rio+Grande+do+Norte+1436+sala+1205+Savassi+Belo+Horizonte" rel="noopener">R. Rio Grande do Norte, 1436, sala 1205 · Savassi</a></dd></div>
-      <div><dt>Telefone</dt><dd><a href="tel:+553133098710">(31) 3309-8710</a></dd></div>
       <div><dt>WhatsApp</dt><dd><a href="https://wa.me/5531984461501" rel="noopener">(31) 98446-1501</a></dd></div>
       <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/drahelenafraga/" rel="noopener">@drahelenafraga</a></dd></div>
+      <div><dt>YouTube</dt><dd><a href="https://www.youtube.com/@drahelenafraga" rel="noopener">@drahelenafraga</a></dd></div>
     </dl>
   </div>
 </section>
