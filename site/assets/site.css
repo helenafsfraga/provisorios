@@ -543,6 +543,15 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 .trilho-audio{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
 .trilho-audio::-webkit-scrollbar{display:none}
 .trilho-audio .audio{flex:0 0 min(84vw,360px);scroll-snap-align:start;padding:20px 22px}
+/* antes e depois com fotos reais: quadro quadrado, olhos alinhados entre as duas fotos */
+.compara.foto{aspect-ratio:1/1;background:#1b1210}
+.compara.foto .lado{display:block;overflow:hidden}
+.compara.foto img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.compara.foto .antes img{object-position:50% 64%;transform:scale(1.05)}
+.compara.foto .depois img{object-position:50% 36%;transform:scale(1.06) translateX(2.8%)}
+.compara .lado .etq{position:absolute;bottom:14px;margin:0;padding:7px 14px;background:rgba(42,7,13,.82);color:#FBF6EC;font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.compara .antes .etq{left:14px}
+.compara .depois .etq{right:14px}
 /* revisao por audio 1 */
 .selo-gira,.selo-centro,.selo-fundo{left:auto;right:-30px}
 .cartao-dra{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-bottom:34px}
