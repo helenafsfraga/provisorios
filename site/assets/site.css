@@ -359,11 +359,28 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 .perfil.escuro .pontos li::before{border-color:var(--ouro-claro)}
 .perfil.escuro .perfil-foto::before{inset:14px -14px -14px 14px;border:1px solid var(--ouro-claro);border-radius:0;opacity:.6}
 .perfil.escuro .foto-vaga{position:relative;z-index:1}
+/* antes e depois de arrastar no lugar da foto do bloco */
+.perfil-foto.com-compara{width:100%;max-width:560px}
+.perfil-foto.com-compara::before,.perfil.escuro .perfil-foto.com-compara::before{inset:12px -10px 34px 10px;border:1px solid var(--ouro);border-radius:0;opacity:.55}
+.perfil.escuro .perfil-foto.com-compara::before{border-color:var(--ouro-claro)}
+.perfil-foto .compara{z-index:1}
+.perfil-foto .dica{margin:14px 0 0;font-size:13.5px;letter-spacing:.06em;color:var(--tinta-suave);text-align:center}
+.perfil.escuro .dica{color:rgba(237,227,210,.75)}
 @media (min-width:1000px){
   .perfil .wrap{grid-template-columns:minmax(0,4.4fr) minmax(0,6fr);gap:clamp(64px,8vw,120px);align-items:center}
   .perfil-foto{width:100%;max-width:440px;margin:0}
   .perfil.escuro .perfil-foto{order:2;justify-self:end}
   .perfil.escuro .wrap{grid-template-columns:minmax(0,6fr) minmax(0,4.4fr)}
+  .perfil:has(.com-compara) .wrap{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(48px,5vw,80px)}
+  .perfil.escuro:has(.com-compara) .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)}
+  .perfil:has(.com-compara) .wrap{max-width:1600px}
+  .perfil-foto.com-compara{max-width:none}
+  .perfil:has(.com-compara) h2{font-size:clamp(3rem,4.6vw,4.4rem)}
+  .perfil:has(.com-compara) .lead{font-size:clamp(1.25rem,1.6vw,1.5rem);line-height:1.5}
+  .perfil:has(.com-compara) .pontos li{font-size:clamp(1.4rem,1.9vw,1.75rem);padding:22px 0 22px 34px}
+  .perfil:has(.com-compara) .rotulo{font-size:clamp(1.6rem,2vw,1.9rem)}
+  .perfil-foto .dica{font-size:15.5px}
+  .perfil-foto .compara .etq{font-size:13px;padding:9px 16px}
 }
 .duo{margin-top:clamp(48px,10vw,88px);display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .duo .arco{aspect-ratio:3/4;margin-bottom:18px}
@@ -451,7 +468,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 .btn-p svg{width:16px;height:16px}
 .cta{margin-top:36px;display:flex;width:100%}
 .cta.centro{margin-inline:auto}
-.zap{position:fixed;left:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:35;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.5);transition:transform .25s}
+.zap{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:35;width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px -8px rgba(0,0,0,.5);transition:transform .25s}
 .zap:hover{transform:scale(1.06)}
 .zap svg{width:32px;height:32px}
 .barra{display:none!important}
@@ -549,7 +566,27 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 .compara.foto img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
 .compara.foto .antes img{object-position:50% 64%;transform:scale(1.05)}
 .compara.foto .depois img{object-position:50% 36%;transform:scale(1.06) translateX(2.8%)}
+/* par já recortado no mesmo quadro (olhos alinhados no arquivo) */
+.compara.foto.alinhada img{object-position:50% 50%;transform:none}
 .compara .lado .etq{position:absolute;bottom:14px;margin:0;padding:7px 14px;background:rgba(42,7,13,.82);color:#FBF6EC;font:600 12px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+/* galeria de antes e depois: quadros emoldurados; roda sozinha, para com o mouse em cima, anda pelas setas ou pelo dedo */
+.gal-setas{justify-content:flex-end;padding:0 var(--gutter);margin-top:clamp(40px,8vw,72px)}
+.escuro .gal-setas button{border-color:rgba(212,183,122,.55);color:var(--ouro-claro)}
+.escuro .gal-setas button:hover{background:var(--ouro-claro);color:var(--bordo)}
+.galeria{overflow-x:auto;scrollbar-width:none;margin-top:18px;padding:6px 0 10px;-webkit-overflow-scrolling:touch}
+.galeria::-webkit-scrollbar{display:none}
+.galeria-trilho{display:flex;width:max-content;padding-left:var(--gutter)}
+.galeria-trilho.rola{padding-left:0}
+.quadro{position:relative;flex:0 0 auto;margin:0 clamp(14px,2.4vw,24px) 0 0;padding:10px;background:#FBF8F1;border:1px solid rgba(176,141,76,.6);box-shadow:0 14px 30px -22px rgba(35,26,23,.55)}
+.quadro img{display:block;height:clamp(250px,64vw,340px);width:auto;max-width:none}
+.quadro .etq{position:absolute;padding:6px 11px;background:rgba(42,7,13,.82);color:#FBF6EC;font:600 10.5px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase}
+.quadro.lado .etq{bottom:20px}
+.quadro.lado .a{left:20px}
+.quadro.lado .d{right:20px}
+.quadro.pilha .etq{left:20px}
+.quadro.pilha .a{top:20px}
+.quadro.pilha .d{top:calc(50% + 10px)}
+.escuro .quadro{background:rgba(251,246,236,.06);border-color:rgba(212,183,122,.5);box-shadow:none}
 .compara .antes .etq{left:14px}
 .compara .depois .etq{right:14px}
 /* revisao por audio 1 */
