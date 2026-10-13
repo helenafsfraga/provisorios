@@ -560,6 +560,17 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 .trilho-audio{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px}
 .trilho-audio::-webkit-scrollbar{display:none}
 .trilho-audio .audio{flex:0 0 min(84vw,360px);scroll-snap-align:start;padding:20px 22px}
+/* tocador: botao, onda com o desenho real do audio (vinho = ja tocado) e nome + tempo */
+button.tocar{border:0;padding:0;cursor:pointer;transition:background .25s,transform .2s}
+button.tocar:hover{background:var(--bordo)}
+button.tocar:active{transform:scale(.95)}
+button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+.audio.tocando .tocar::after{left:50%;box-sizing:border-box;width:14px;height:16px;border-width:0 5px;border-color:var(--marfim)}
+.trilho-audio .onda{gap:2px;height:38px;cursor:pointer}
+.trilho-audio .onda i{flex:1;width:auto;min-width:2px;transition:background .15s}
+.trilho-audio .onda i.ja{background:var(--vinho)}
+.trilho-audio .audio small{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:14px;letter-spacing:0;font-variant-numeric:tabular-nums}
+.trilho-audio .audio small b{font-size:17px;font-weight:600;color:var(--tinta)}
 /* antes e depois com fotos reais: quadro quadrado, olhos alinhados entre as duas fotos */
 .compara.foto{aspect-ratio:1/1;background:#1b1210}
 .compara.foto .lado{display:block;overflow:hidden}

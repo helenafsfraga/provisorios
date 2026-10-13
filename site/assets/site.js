@@ -15,6 +15,26 @@
   /* audios: carrossel estatico, anda so pelas setas ou pelo dedo */
   var ta=q('#trilho-audio');
   if(ta){q('#au-volta').addEventListener('click',function(){ta.scrollBy({left:-374,behavior:'smooth'})});q('#au-avanca').addEventListener('click',function(){ta.scrollBy({left:374,behavior:'smooth'})})}
+  (function(){
+    var cs=Array.prototype.slice.call(document.querySelectorAll('#trilho-audio .audio[data-src]')),som=null,atual=null;
+    function mmss(s){s=Math.max(0,Math.round(s));return Math.floor(s/60)+':'+('0'+s%60).slice(-2)}
+    function pinta(c,k){var b=c.querySelectorAll('.onda i'),n=Math.round(k*b.length);for(var i=0;i<b.length;i++)b[i].classList.toggle('ja',i<n)}
+    function estado(c,t){c.classList.toggle('tocando',t);c.querySelector('.tocar').setAttribute('aria-label',(t?'Pausar':'Ouvir')+' o depoimento de '+c.dataset.nome)}
+    function zera(c){estado(c,false);pinta(c,0);c.querySelector('.tempo').textContent=mmss(+c.dataset.seg)}
+    function toca(c,k){
+      if(!som){som=new Audio();som.preload='none';
+        som.addEventListener('timeupdate',function(){if(!atual)return;var d=isFinite(som.duration)&&som.duration?som.duration:+atual.dataset.seg;pinta(atual,som.currentTime/d);atual.querySelector('.tempo').textContent=mmss(d-som.currentTime)});
+        som.addEventListener('play',function(){if(atual)estado(atual,true)});
+        som.addEventListener('pause',function(){if(atual&&som.paused)estado(atual,false)});
+        som.addEventListener('ended',function(){if(atual)zera(atual)});
+        som.addEventListener('error',function(){if(atual)zera(atual)})}
+      if(atual!==c){if(atual)zera(atual);atual=c;som.src=c.dataset.src}
+      if(k!=null){try{som.currentTime=Math.max(0,Math.min(.98,k))*(+c.dataset.seg)}catch(e){}}
+      var p=som.play();if(p&&p.catch)p.catch(function(){estado(c,false)})}
+    cs.forEach(function(c){
+      c.querySelector('.tocar').addEventListener('click',function(){if(atual===c&&!som.paused)som.pause();else toca(c)});
+      c.querySelector('.onda').addEventListener('click',function(e){var r=this.getBoundingClientRect();toca(c,(e.clientX-r.left)/r.width)})});
+  })();
 
   /* avaliacoes: 3 conjuntos de 30 que se revezam a cada semana */
   var trilhos=qa('.roda-trilho');
