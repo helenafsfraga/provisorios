@@ -12,6 +12,43 @@
   /* antes e depois */
   qa('.compara').forEach(function(c){c.querySelector('input').addEventListener('input',function(){c.style.setProperty('--pos',this.value+'%')})});
 
+  /* galeria de antes e depois: roda sozinha e devagar; para com o mouse em cima; setas e dedo andam para os dois lados; nao tem fim */
+  document.querySelectorAll(".galeria").forEach(function(gal){
+    var gt=gal.querySelector(".galeria-trilho"),setas=gal.previousElementSibling,n=gt.children.length;
+    Array.prototype.slice.call(gt.children).forEach(function(k){var d=k.cloneNode(true);d.setAttribute("aria-hidden","true");gt.appendChild(d)});
+    gt.classList.add("rola");
+    var calma=window.matchMedia("(prefers-reduced-motion: reduce)").matches,em=false,ate=0,pos=0,antes=0,VEL=22;
+    function volta(){return gt.scrollWidth/2}
+    /* mantem a posicao no meio das duas copias, para sobrar caminho para os dois lados */
+    function centra(){var H=volta(),a=Math.max(0,(H-gal.clientWidth)/2),s=gal.scrollLeft,z=s;while(z<a)z+=H;while(z>=a+H)z-=H;if(z!==s)gal.scrollLeft=z;pos=gal.scrollLeft}
+    function espera(ms){ate=Math.max(ate,performance.now()+ms)}
+    gal.addEventListener("mouseenter",function(){em=true});
+    gal.addEventListener("mouseleave",function(){em=false;espera(600)});
+    ["touchstart","touchmove","wheel","pointerdown"].forEach(function(ev){gal.addEventListener(ev,function(){espera(4000)},{passive:true})});
+    gal.addEventListener("touchend",function(){espera(4000)},{passive:true});
+    if(setas&&setas.classList.contains("gal-setas")){
+      setas.addEventListener("mouseenter",function(){em=true});
+      setas.addEventListener("mouseleave",function(){em=false;espera(600)});
+      setas.addEventListener("click",function(e){
+        var b=e.target.closest("button");if(!b)return;
+        var q=gt.children[0],passo=q.getBoundingClientRect().width+parseFloat(getComputedStyle(q).marginRight);
+        centra();espera(5000);
+        gal.scrollBy({left:passo*(+b.getAttribute("data-dir")),behavior:calma?"auto":"smooth"});
+      });
+    }
+    centra();
+    if(calma)return;
+    requestAnimationFrame(function passo(t){
+      var dt=Math.min(64,t-(antes||t));antes=t;
+      if(!em&&t>ate&&gal.getBoundingClientRect().bottom>0&&gal.getBoundingClientRect().top<innerHeight){
+        if(Math.abs(gal.scrollLeft-pos)>2)centra();
+        pos+=VEL*dt/1000;var H=volta();if(pos>=H+Math.max(0,(H-gal.clientWidth)/2))pos-=H;
+        gal.scrollLeft=pos;
+      }
+      requestAnimationFrame(passo);
+    });
+  });
+
   /* audios: carrossel estatico, anda so pelas setas ou pelo dedo */
   var ta=q('#trilho-audio');
   if(ta){q('#au-volta').addEventListener('click',function(){ta.scrollBy({left:-374,behavior:'smooth'})});q('#au-avanca').addEventListener('click',function(){ta.scrollBy({left:374,behavior:'smooth'})})}
@@ -34,6 +71,12 @@
     cs.forEach(function(c){
       c.querySelector('.tocar').addEventListener('click',function(){if(atual===c&&!som.paused)som.pause();else toca(c)});
       c.querySelector('.onda').addEventListener('click',function(e){var r=this.getBoundingClientRect();toca(c,(e.clientX-r.left)/r.width)})});
+  })();
+  (function(){
+    var tv=document.getElementById('trilho-video');if(!tv)return;
+    function anda(s){var c=tv.querySelector('.video'),p=c.offsetWidth+16;tv.scrollBy({left:s*Math.max(1,Math.floor(tv.clientWidth/p))*p,behavior:'smooth'})}
+    document.getElementById('vi-volta').addEventListener('click',function(){anda(-1)});
+    document.getElementById('vi-avanca').addEventListener('click',function(){anda(1)});
   })();
 
   /* avaliacoes: 3 conjuntos de 30 que se revezam a cada semana */

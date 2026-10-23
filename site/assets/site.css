@@ -111,13 +111,12 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
 .tratamentos{background:var(--areia)}
 .lista-trat{border-top:1px solid rgba(35,26,23,.2)}
 .lista-trat a{display:grid;grid-template-columns:2.6em 1fr auto;align-items:center;gap:6px;padding:22px 0;border-bottom:1px solid rgba(35,26,23,.2);text-decoration:none;position:relative;transition:padding .35s ease,color .3s}
-.lista-trat h3{font-size:clamp(1.5rem,6.2vw,2.5rem);line-height:1.1;color:var(--tinta);transition:color .3s}
-.lista-trat p{grid-column:2/3;color:var(--tinta-suave);font-size:15px;max-width:34em;margin-top:6px}
+.lista-trat h3{font-size:clamp(1.4rem,5.4vw,1.9rem);line-height:1.15;color:var(--tinta);transition:color .3s}
+.lista-trat p{grid-column:2/3;color:var(--tinta-suave);font-size:17px;line-height:1.55;max-width:34em;margin-top:6px}
 .lista-trat .seta{width:44px;height:44px;border-radius:50%;border:1px solid rgba(110,20,35,.3);display:grid;place-items:center;color:var(--vinho);grid-row:1/2;grid-column:3/4;transition:background .3s,color .3s,transform .3s}
 .lista-trat .seta svg{width:16px;height:16px}
 .lista-trat a:hover h3{color:var(--vinho)}
 .lista-trat a:hover .seta{background:var(--vinho);color:var(--marfim);transform:rotate(-45deg)}
-.lista-trat a.menor h3{font-size:clamp(1.2rem,4.8vw,1.6rem)}
 
 /* ───── antes e depois ───── */
 .antesdepois{background:var(--marfim)}
@@ -281,7 +280,7 @@ h1 em,h2 em{font-style:italic;font-weight:500;color:var(--ouro-texto)}
   .selo-gira,.selo-centro,.selo-fundo{left:auto;right:-74px;bottom:auto;top:9%;width:132px;height:132px}
 
   .manifesto .wrap{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,9fr);gap:40px}
-  .lista-trat a{grid-template-columns:4em minmax(0,5fr) minmax(0,5fr) auto;padding:30px 0}
+  .lista-trat a{grid-template-columns:4em minmax(0,5fr) minmax(0,5fr) auto;column-gap:clamp(24px,3vw,48px);padding:30px 0}
   .lista-trat p{grid-column:3/4;margin:0}
   .lista-trat .seta{grid-column:4/5}
   .lista-trat a:hover{padding-left:18px}
@@ -571,6 +570,15 @@ button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
 .trilho-audio .onda i.ja{background:var(--vinho)}
 .trilho-audio .audio small{display:flex;align-items:baseline;justify-content:space-between;gap:12px;font-size:14px;letter-spacing:0;font-variant-numeric:tabular-nums}
 .trilho-audio .audio small b{font-size:17px;font-weight:600;color:var(--tinta)}
+.mostra{background:var(--linho)}
+.trilho-video{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 8px}
+.trilho-video::-webkit-scrollbar{display:none}
+.video{flex:0 0 min(46vw,232px);scroll-snap-align:start;text-decoration:none;color:var(--tinta-suave)}
+.video img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:var(--areia);box-shadow:0 1px 0 rgba(110,20,35,.1);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.video:hover img{transform:translateY(-4px);box-shadow:0 18px 34px -18px rgba(61,12,20,.5)}
+.video small{display:block;margin-top:12px;font-size:14px;letter-spacing:.02em}
+.video:focus-visible{outline:2px solid var(--vinho);outline-offset:4px;border-radius:16px}
+.mostra .cta{margin-top:clamp(28px,6vw,44px)}
 /* antes e depois com fotos reais: quadro quadrado, olhos alinhados entre as duas fotos */
 .compara.foto{aspect-ratio:1/1;background:#1b1210}
 .compara.foto .lado{display:block;overflow:hidden}
@@ -616,6 +624,25 @@ button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
 @media (min-width:1000px){
   .capa .selo-gira,.capa .selo-centro,.capa .selo-fundo{left:auto;right:-66px}
 }
+
+/* tratamentos na home: cartoes fixos, sem link (pedido do Vitor em 23/10/2026) */
+.cartoes-trat{display:grid;gap:16px}
+.ctrat{background:var(--marfim);border:1px solid rgba(110,20,35,.12);border-radius:18px;padding:clamp(24px,3vw,32px);align-self:start;transition:border-color .3s}
+.ctrat[open]{border-color:rgba(110,20,35,.32)}
+.ctrat summary{list-style:none;cursor:pointer;position:relative;padding-right:44px}
+.ctrat summary::-webkit-details-marker{display:none}
+.ctrat summary:focus-visible{outline:2px solid var(--vinho);outline-offset:6px;border-radius:8px}
+.ctrat .mais{position:absolute;top:0;right:0;width:32px;height:32px;border-radius:50%;border:1px solid rgba(110,20,35,.3);transition:background .3s,transform .3s}
+.ctrat .mais::before,.ctrat .mais::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:var(--vinho);transform:translate(-50%,-50%)}
+.ctrat .mais::after{transform:translate(-50%,-50%) rotate(90deg);transition:opacity .3s}
+.ctrat summary:hover .mais{background:rgba(110,20,35,.06)}
+.ctrat[open] .mais::after{opacity:0}
+.ctrat .lead-trat{margin:16px 0 0;padding-top:16px;border-top:1px solid rgba(110,20,35,.14);font-size:17px;line-height:1.6;color:var(--tinta)}
+.ctrat .indice{display:block;font:italic 400 15px/1 var(--serif);color:var(--ouro-texto);margin-bottom:18px}
+.ctrat h3{font-size:clamp(1.3rem,4.6vw,1.55rem);line-height:1.2;color:var(--tinta);margin:0 0 10px}
+.ctrat p{margin:0;font-size:17px;line-height:1.55;color:var(--tinta-suave)}
+@media (min-width:700px){.cartoes-trat{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1000px){.cartoes-trat{grid-template-columns:repeat(3,1fr);gap:20px}}
 
 /* ══════ site: paginas internas ══════ */
 .btn-verde svg{flex:none}
