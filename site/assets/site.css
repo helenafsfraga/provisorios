@@ -576,7 +576,6 @@ button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
 .video{flex:0 0 min(46vw,232px);scroll-snap-align:start;text-decoration:none;color:var(--tinta-suave)}
 .video img{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:14px;background:var(--areia);box-shadow:0 1px 0 rgba(110,20,35,.1);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
 .video:hover img{transform:translateY(-4px);box-shadow:0 18px 34px -18px rgba(61,12,20,.5)}
-.video small{display:block;margin-top:12px;font-size:14px;letter-spacing:.02em}
 .video:focus-visible{outline:2px solid var(--vinho);outline-offset:4px;border-radius:16px}
 .mostra .cta{margin-top:clamp(28px,6vw,44px)}
 /* antes e depois com fotos reais: quadro quadrado, olhos alinhados entre as duas fotos */

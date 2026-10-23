@@ -73,10 +73,28 @@
       c.querySelector('.onda').addEventListener('click',function(e){var r=this.getBoundingClientRect();toca(c,(e.clientX-r.left)/r.width)})});
   })();
   (function(){
-    var tv=document.getElementById('trilho-video');if(!tv)return;
-    function anda(s){var c=tv.querySelector('.video'),p=c.offsetWidth+16;tv.scrollBy({left:s*Math.max(1,Math.floor(tv.clientWidth/p))*p,behavior:'smooth'})}
-    document.getElementById('vi-volta').addEventListener('click',function(){anda(-1)});
-    document.getElementById('vi-avanca').addEventListener('click',function(){anda(1)});
+    var tv=document.getElementById('trilho-video');
+    function passo(tr,sel){var c=tr.querySelector(sel);return c?c.offsetWidth+parseFloat(getComputedStyle(tr).columnGap||16):tr.clientWidth}
+    if(tv){
+      var anda=function(s){var p=passo(tv,'.video');tv.scrollBy({left:s*Math.max(1,Math.floor(tv.clientWidth/p))*p,behavior:'smooth'})};
+      document.getElementById('vi-volta').addEventListener('click',function(){anda(-1)});
+      document.getElementById('vi-avanca').addEventListener('click',function(){anda(1)});
+    }
+    /* audios e videos andam sozinhos a cada 8 segundos; param com o mouse em cima, depois de um toque e enquanto um audio toca */
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+    [[document.getElementById('trilho-audio'),'.audio'],[tv,'.video']].forEach(function(x){
+      var tr=x[0];if(!tr)return;var parado=false,ate=0;
+      tr.addEventListener('mouseenter',function(){parado=true});
+      tr.addEventListener('mouseleave',function(){parado=false});
+      ['touchstart','pointerdown','focusin'].forEach(function(ev){tr.addEventListener(ev,function(){ate=Date.now()+15000},{passive:true})});
+      var setas=tr.parentNode.querySelector('.setas');if(setas)setas.addEventListener('click',function(){ate=Date.now()+15000});
+      setInterval(function(){
+        if(parado||Date.now()<ate||document.hidden||tr.querySelector('.tocando'))return;
+        var r=tr.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+        if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)tr.scrollTo({left:0,behavior:'smooth'});
+        else tr.scrollBy({left:passo(tr,x[1]),behavior:'smooth'});
+      },8000);
+    });
   })();
 
   /* avaliacoes: 3 conjuntos de 30 que se revezam a cada semana */
