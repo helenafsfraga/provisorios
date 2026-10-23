@@ -591,6 +591,11 @@ button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
 .video:hover img{transform:translateY(-4px);box-shadow:0 18px 34px -18px rgba(61,12,20,.5)}
 .video:focus-visible{outline:2px solid var(--vinho);outline-offset:4px;border-radius:16px}
 .mostra .cta{margin-top:clamp(28px,6vw,44px)}
+.trilho-yt{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 8px;margin-top:clamp(20px,4vw,32px)}
+.trilho-yt::-webkit-scrollbar{display:none}
+.video.paisagem{flex:0 0 min(78vw,320px)}
+.video.paisagem img{aspect-ratio:16/9}
+@media (min-width:900px){.trilho-yt{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible}}
 /* antes e depois com fotos reais: quadro quadrado, olhos alinhados entre as duas fotos */
 .compara.foto{aspect-ratio:1/1;background:#1b1210}
 .compara.foto .lado{display:block;overflow:hidden}
@@ -1003,6 +1008,12 @@ button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
       <a class="video" href="https://www.instagram.com/reel/DdvyvBtA_3I/" target="_blank" rel="noopener" aria-label="Assistir no Instagram: Terçol nas pálpebras, você já teve?"><img src="videos/DdvyvBtA_3I.jpg" alt="" width="360" height="640" loading="lazy"></a>
       <a class="video" href="https://www.instagram.com/reel/Ddua7cHB93d/" target="_blank" rel="noopener" aria-label="Assistir no Instagram: Olhos vermelhos e irritados"><img src="videos/Ddua7cHB93d.jpg" alt="" width="360" height="640" loading="lazy"></a>
     </div>
+    <div class="trilho-yt surge">
+      <a class="video paisagem" href="https://www.youtube.com/watch?v=WnCer_Hzpn4" target="_blank" rel="noopener" aria-label="Assistir no YouTube: Como uma cirurgia de pálpebras pode transformar mais do que o olhar"><img src="videos/yt-WnCer_Hzpn4.jpg" alt="" width="640" height="360" loading="lazy"></a>
+      <a class="video paisagem" href="https://www.youtube.com/watch?v=pPoOKZpI6Sk" target="_blank" rel="noopener" aria-label="Assistir no YouTube: 3 dicas que vão lhe ajudar a não coçar os olhos"><img src="videos/yt-pPoOKZpI6Sk.jpg" alt="" width="640" height="360" loading="lazy"></a>
+      <a class="video paisagem" href="https://www.youtube.com/watch?v=AZb2-J4R2qA" target="_blank" rel="noopener" aria-label="Assistir no YouTube: Saiba como são feitos os pontos na blefaroplastia"><img src="videos/yt-AZb2-J4R2qA.jpg" alt="" width="640" height="360" loading="lazy"></a>
+      <a class="video paisagem" href="https://www.youtube.com/watch?v=OTsFf8F_MVo" target="_blank" rel="noopener" aria-label="Assistir no YouTube: Veja como se preparar corretamente para a cirurgia das pálpebras"><img src="videos/yt-OTsFf8F_MVo.jpg" alt="" width="640" height="360" loading="lazy"></a>
+    </div>
     <a class="btn btn-verde cta centro" href="https://wa.me/5531984461501?text=Ol%C3%A1%2C%20Jessica!%20Vim%20pelo%20Google%20e%20gostaria%20de%20agendar%20uma%20consulta%20de%20blefaroplastia%20com%20a%20Dra.%20Helena%20Fraga." rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Agendar consulta</a>
   </div>
 </section>
@@ -1142,7 +1153,7 @@ button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
       document.getElementById('vi-volta').addEventListener('click',function(){anda(-1)});
       document.getElementById('vi-avanca').addEventListener('click',function(){anda(1)});
     }
-    /* audios e videos andam sozinhos a cada 8 segundos; param com o mouse em cima, depois de um toque e enquanto um audio toca */
+    /* audios e videos andam sozinhos, dois cartoes a cada 5 segundos; param com o mouse em cima, depois de um toque e enquanto um audio toca */
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
     [[document.getElementById('trilho-audio'),'.audio'],[tv,'.video']].forEach(function(x){
       var tr=x[0];if(!tr)return;var parado=false,ate=0;
@@ -1154,8 +1165,8 @@ button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
         if(parado||Date.now()<ate||document.hidden||tr.querySelector('.tocando'))return;
         var r=tr.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
         if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)tr.scrollTo({left:0,behavior:'smooth'});
-        else tr.scrollBy({left:passo(tr,x[1]),behavior:'smooth'});
-      },8000);
+        else tr.scrollBy({left:2*passo(tr,x[1]),behavior:'smooth'});
+      },5000);
     });
   })();
   /* tocador:fim */

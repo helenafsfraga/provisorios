@@ -80,7 +80,7 @@
       document.getElementById('vi-volta').addEventListener('click',function(){anda(-1)});
       document.getElementById('vi-avanca').addEventListener('click',function(){anda(1)});
     }
-    /* audios e videos andam sozinhos a cada 8 segundos; param com o mouse em cima, depois de um toque e enquanto um audio toca */
+    /* audios e videos andam sozinhos, dois cartoes a cada 5 segundos; param com o mouse em cima, depois de um toque e enquanto um audio toca */
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
     [[document.getElementById('trilho-audio'),'.audio'],[tv,'.video']].forEach(function(x){
       var tr=x[0];if(!tr)return;var parado=false,ate=0;
@@ -92,8 +92,8 @@
         if(parado||Date.now()<ate||document.hidden||tr.querySelector('.tocando'))return;
         var r=tr.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
         if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)tr.scrollTo({left:0,behavior:'smooth'});
-        else tr.scrollBy({left:passo(tr,x[1]),behavior:'smooth'});
-      },8000);
+        else tr.scrollBy({left:2*passo(tr,x[1]),behavior:'smooth'});
+      },5000);
     });
   })();
 
