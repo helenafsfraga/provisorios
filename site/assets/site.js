@@ -96,6 +96,20 @@
       },5000);
     });
   })();
+  (function(){
+    var cs=document.querySelectorAll('.video[data-embed]');if(!cs.length)return;
+    var j=document.createElement('div');j.className='janela';j.hidden=true;j.setAttribute('role','dialog');j.setAttribute('aria-modal','true');j.setAttribute('aria-label','Vídeo');
+    j.innerHTML='<div class="janela-caixa"><button class="janela-fecha" type="button" aria-label="Fechar vídeo">&times;</button><div class="janela-quadro"></div></div>';
+    document.body.appendChild(j);
+    var quadro=j.querySelector('.janela-quadro'),x=j.querySelector('.janela-fecha'),volta=null;
+    function abre(c){volta=c;j.classList.toggle('paisagem',c.classList.contains('paisagem'));
+      var f=document.createElement('iframe');f.src=c.getAttribute('data-embed');f.title=c.getAttribute('aria-label')||'Vídeo';f.setAttribute('allow','autoplay; encrypted-media; picture-in-picture; fullscreen');f.setAttribute('allowfullscreen','');
+      quadro.innerHTML='';quadro.appendChild(f);j.hidden=false;document.body.classList.add('com-janela');x.focus()}
+    function fecha(){quadro.innerHTML='';j.hidden=true;document.body.classList.remove('com-janela');if(volta)volta.focus()}
+    Array.prototype.forEach.call(cs,function(c){c.addEventListener('click',function(){abre(c)})});
+    x.addEventListener('click',fecha);j.addEventListener('click',function(e){if(e.target===j)fecha()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!j.hidden)fecha()});
+  })();
 
   /* avaliacoes: 3 conjuntos de 30 que se revezam a cada semana */
   var trilhos=qa('.roda-trilho');
