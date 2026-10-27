@@ -633,16 +633,9 @@ button.tocar:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
 /* estrutura de landing (26/10/2026): foto da Dra., redes, cartao de video que abre na pagina */
 .cartao-dra.com-foto img{width:132px;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:82% 18%;border-radius:var(--arco);border:1px solid var(--ouro)}
 .clinica .cta{margin-top:40px}
-.siga{background:var(--linho);text-align:center}
-.siga h2{margin:0 auto 18px}
-.siga .lead{margin-inline:auto}
-.redes{list-style:none;padding:0;margin:36px auto 0;display:grid;gap:14px;max-width:660px;text-align:left}
-.redes a{display:flex;flex-direction:column;gap:6px;padding:22px 26px;border:1px solid rgba(110,20,35,.18);border-radius:18px;background:var(--marfim);text-decoration:none;transition:border-color .3s,transform .3s}
-.redes a:hover{border-color:var(--vinho);transform:translateY(-2px)}
-.redes small{font-size:12.5px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--ouro-texto)}
-.redes b{font:500 1.4rem/1.2 var(--serif);color:var(--vinho)}
-.siga .cta{margin-top:36px}
-@media (min-width:700px){.redes{grid-template-columns:1fr 1fr}}
+.siga{margin:28px 0 0;text-align:center;font-size:15px;letter-spacing:.04em;color:var(--tinta-suave)}
+.siga a{color:var(--vinho);text-decoration:underline;text-decoration-color:rgba(138,103,40,.5);text-underline-offset:4px}
+.siga a:hover{text-decoration-color:var(--vinho)}
 button.video{appearance:none;border:0;padding:0;margin:0;background:none;font:inherit;text-align:left;cursor:pointer;color:inherit}
 .janela{position:fixed;inset:0;z-index:60;background:rgba(26,5,9,.88);display:grid;place-items:center;padding:64px 16px 24px}
 .janela[hidden]{display:none}
